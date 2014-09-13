@@ -1,0 +1,1502 @@
+Release 14.1 Map P.15xf (lin)
+Xilinx Mapping Report File for Design 'top_level'
+
+Design Information
+------------------
+Command Line   : map -intstyle silent -mt 2 -detail -p xc6slx16-csg324-3 -pr b
+-c 100 -w -o top_level_map.ncd top_level.ngd top_level.pcf 
+Target Device  : xc6slx16
+Target Package : csg324
+Target Speed   : -3
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Tue Jun  3 15:10:46 2014
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:  209
+Slice Logic Utilization:
+  Number of Slice Registers:                 3,274 out of  18,224   17%
+    Number used as Flip Flops:               3,274
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                      3,644 out of   9,112   39%
+    Number used as logic:                    2,736 out of   9,112   30%
+      Number using O6 output only:           1,949
+      Number using O5 output only:             176
+      Number using O5 and O6:                  611
+      Number used as ROM:                        0
+    Number used as Memory:                     869 out of   2,176   39%
+      Number used as Dual Port RAM:            864
+        Number using O6 output only:            32
+        Number using O5 output only:             0
+        Number using O5 and O6:                832
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:             5
+        Number using O6 output only:             4
+        Number using O5 output only:             0
+        Number using O5 and O6:                  1
+    Number used exclusively as route-thrus:     39
+      Number with same-slice register load:     32
+      Number with same-slice carry load:         7
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                 1,275 out of   2,278   55%
+  Nummber of MUXCYs used:                      364 out of   4,556    7%
+  Number of LUT Flip Flop pairs used:        4,206
+    Number with an unused Flip Flop:         1,723 out of   4,206   40%
+    Number with an unused LUT:                 562 out of   4,206   13%
+    Number of fully used LUT-FF pairs:       1,921 out of   4,206   45%
+    Number of unique control sets:              81
+    Number of slice register sites lost
+      to control set restrictions:             320 out of  18,224    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        38 out of     232   16%
+    Number of LOCed IOBs:                       38 out of      38  100%
+    IOB Flip Flops:                             22
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         4 out of      32   12%
+  Number of RAMB8BWERs:                          0 out of      64    0%
+  Number of BUFIO2/BUFIO2_2CLKs:                 1 out of      32    3%
+    Number used as BUFIO2s:                      1
+    Number used as BUFIO2_2CLKs:                 0
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       2 out of      16   12%
+    Number used as BUFGs:                        2
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
+  Number of ILOGIC2/ISERDES2s:                  16 out of     248    6%
+    Number used as ILOGIC2s:                    14
+    Number used as ISERDES2s:                    2
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     248    0%
+  Number of OLOGIC2/OSERDES2s:                   8 out of     248    3%
+    Number used as OLOGIC2s:                     8
+    Number used as OSERDES2s:                    0
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             1 out of       8   12%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            0 out of      32    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            1 out of       2   50%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                4.05
+
+Peak Memory Usage:  306 MB
+Total REAL time to MAP completion:  1 mins 11 secs 
+Total CPU time to MAP completion (all processors):   1 mins 20 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:Pack:1653 - At least one timing constraint is impossible to meet because component delays alone exceed the constraint. A timing
+   constraint summary below shows the failing constraints (preceded with an Asterisk (*)). Please use the Timing Analyzer (GUI) or TRCE
+   (command line) with the Mapped NCD and PCF files to identify which constraints and paths are failing because of the component delays
+   alone. If the failing path(s) is mapped to Xilinx components as expected, consider relaxing the constraint. If it is not mapped to
+   components as expected, re-evaluate your HDL and how synthesis is optimizing the path. To allow the tools to bypass this error, set the
+   environment variable XIL_TIMING_ALLOW_IMPOSSIBLE to 1.
+
+
+   For more information about the Timing Analyzer, consult the Xilinx Timing Analyzer Reference manual; for more information on TRCE,
+   consult the Xilinx Command Line Tools User Guide "TRACE" chapter.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[13].event_fifo_unit/Mram_data3_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[15].event_fifo_unit/Mram_data3_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[4].event_fifo_unit/Mram_data3_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[3].event_fifo_unit/Mram_data3_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[11].event_fifo_unit/Mram_data7_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[6].event_fifo_unit/Mram_data7_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[15].event_fifo_unit/Mram_data7_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[13].event_fifo_unit/Mram_data7_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[4].event_fifo_unit/Mram_data7_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[3].event_fifo_unit/Mram_data7_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[2].event_fifo_unit/Mram_data7_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[10].event_fifo_unit/Mram_data7_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[10].event_fifo_unit/Mram_data13_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[0].event_fifo_unit/Mram_data2_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[4].event_fifo_unit/Mram_data2_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[10].event_fifo_unit/Mram_data2_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[11].event_fifo_unit/Mram_data3_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[12].event_fifo_unit/Mram_data3_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[2].event_fifo_unit/Mram_data3_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[1].event_fifo_unit/Mram_data3_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[0].event_fifo_unit/Mram_data3_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[5].event_fifo_unit/Mram_data3_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[6].event_fifo_unit/Mram_data3_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[12].event_fifo_unit/Mram_data7_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[7].event_fifo_unit/Mram_data7_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[5].event_fifo_unit/Mram_data7_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[1].event_fifo_unit/Mram_data7_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[0].event_fifo_unit/Mram_data7_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[12].event_fifo_unit/Mram_data13_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[7].event_fifo_unit/Mram_data13_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[14].event_fifo_unit/Mram_data2_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[15].event_fifo_unit/Mram_data2_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[11].event_fifo_unit/Mram_data2_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[13].event_fifo_unit/Mram_data2_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[3].event_fifo_unit/Mram_data2_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[8].event_fifo_unit/Mram_data2_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[10].event_fifo_unit/Mram_data3_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[14].event_fifo_unit/Mram_data3_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[7].event_fifo_unit/Mram_data3_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[8].event_fifo_unit/Mram_data3_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[14].event_fifo_unit/Mram_data7_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[8].event_fifo_unit/Mram_data7_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[9].event_fifo_unit/Mram_data7_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[12].event_fifo_unit/Mram_data6_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[1].event_fifo_unit/Mram_data6_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[14].event_fifo_unit/Mram_data6_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[2].event_fifo_unit/Mram_data6_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[12].event_fifo_unit/Mram_data8_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[0].event_fifo_unit/Mram_data9_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[8].event_fifo_unit/Mram_data13_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[15].event_fifo_unit/Mram_data13_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[3].event_fifo_unit/Mram_data13_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[5].event_fifo_unit/Mram_data13_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[0].event_fifo_unit/Mram_data13_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[14].event_fifo_unit/Mram_data13_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[12].event_fifo_unit/Mram_data2_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[1].event_fifo_unit/Mram_data2_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[7].event_fifo_unit/Mram_data2_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[6].event_fifo_unit/Mram_data2_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[5].event_fifo_unit/Mram_data2_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[6].event_fifo_unit/Mram_data4_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[0].event_fifo_unit/Mram_data4_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[13].event_fifo_unit/Mram_data4_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[9].event_fifo_unit/Mram_data3_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[11].event_fifo_unit/Mram_data5_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[15].event_fifo_unit/Mram_data6_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[10].event_fifo_unit/Mram_data6_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[9].event_fifo_unit/Mram_data6_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[13].event_fifo_unit/Mram_data6_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[3].event_fifo_unit/Mram_data6_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[0].event_fifo_unit/Mram_data6_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[7].event_fifo_unit/Mram_data6_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[5].event_fifo_unit/Mram_data6_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[13].event_fifo_unit/Mram_data8_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[7].event_fifo_unit/Mram_data9_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[12].event_fifo_unit/Mram_data9_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[9].event_fifo_unit/Mram_data9_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[2].event_fifo_unit/Mram_data9_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[3].event_fifo_unit/Mram_data9_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[1].event_fifo_unit/Mram_data9_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[4].event_fifo_unit/Mram_data9_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[15].event_fifo_unit/Mram_data9_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[11].event_fifo_unit/Mram_data9_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[9].event_fifo_unit/Mram_data13_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[13].event_fifo_unit/Mram_data13_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[11].event_fifo_unit/Mram_data13_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[6].event_fifo_unit/Mram_data13_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[1].event_fifo_unit/Mram_data13_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[4].event_fifo_unit/Mram_data13_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[12].event_fifo_unit/Mram_data4_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[3].event_fifo_unit/Mram_data4_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[15].event_fifo_unit/Mram_data4_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[14].event_fifo_unit/Mram_data8_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[8].event_fifo_unit/Mram_data8_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[1].event_fifo_unit/Mram_data8_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[11].event_fifo_unit/Mram_data8_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[0].event_fifo_unit/Mram_data8_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[8].event_fifo_unit/Mram_data9_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[5].event_fifo_unit/Mram_data9_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[10].event_fifo_unit/Mram_data9_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[14].event_fifo_unit/Mram_data9_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[13].event_fifo_unit/Mram_data9_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[10].event_fifo_unit/Mram_data10_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[2].event_fifo_unit/Mram_data10_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[2].event_fifo_unit/Mram_data13_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[6].event_fifo_unit/Mram_data10_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[2].event_fifo_unit/Mram_data2_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[9].event_fifo_unit/Mram_data2_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[11].event_fifo_unit/Mram_data4_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[10].event_fifo_unit/Mram_data4_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[8].event_fifo_unit/Mram_data4_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[14].event_fifo_unit/Mram_data4_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[4].event_fifo_unit/Mram_data4_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[2].event_fifo_unit/Mram_data4_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[15].event_fifo_unit/Mram_data5_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[13].event_fifo_unit/Mram_data5_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[9].event_fifo_unit/Mram_data5_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[7].event_fifo_unit/Mram_data5_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[6].event_fifo_unit/Mram_data5_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[4].event_fifo_unit/Mram_data5_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[5].event_fifo_unit/Mram_data5_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[3].event_fifo_unit/Mram_data5_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[1].event_fifo_unit/Mram_data5_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[11].event_fifo_unit/Mram_data6_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[4].event_fifo_unit/Mram_data6_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[6].event_fifo_unit/Mram_data6_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[5].event_fifo_unit/Mram_data8_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[9].event_fifo_unit/Mram_data8_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[2].event_fifo_unit/Mram_data8_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[3].event_fifo_unit/Mram_data8_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[4].event_fifo_unit/Mram_data8_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[15].event_fifo_unit/Mram_data8_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[10].event_fifo_unit/Mram_data8_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[11].event_fifo_unit/Mram_data11_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[3].event_fifo_unit/Mram_data11_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[7].event_fifo_unit/Mram_data11_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[6].event_fifo_unit/Mram_data9_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[8].event_fifo_unit/Mram_data10_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[4].event_fifo_unit/Mram_data10_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[11].event_fifo_unit/Mram_data10_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[7].event_fifo_unit/Mram_data10_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[5].event_fifo_unit/Mram_data10_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[0].event_fifo_unit/Mram_data10_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[9].event_fifo_unit/Mram_data1_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[7].event_fifo_unit/Mram_data1_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[1].event_fifo_unit/Mram_data1_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[5].event_fifo_unit/Mram_data1_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[7].event_fifo_unit/Mram_data4_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[1].event_fifo_unit/Mram_data4_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[9].event_fifo_unit/Mram_data4_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[5].event_fifo_unit/Mram_data4_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[12].event_fifo_unit/Mram_data5_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[8].event_fifo_unit/Mram_data5_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[14].event_fifo_unit/Mram_data5_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[1].event_fifo_unit/Mram_data12_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[8].event_fifo_unit/Mram_data6_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[6].event_fifo_unit/Mram_data8_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[7].event_fifo_unit/Mram_data8_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[8].event_fifo_unit/Mram_data11_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[9].event_fifo_unit/Mram_data11_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[6].event_fifo_unit/Mram_data11_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[5].event_fifo_unit/Mram_data11_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[1].event_fifo_unit/Mram_data11_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[9].event_fifo_unit/Mram_data10_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[12].event_fifo_unit/Mram_data10_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[14].event_fifo_unit/Mram_data10_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[14].event_fifo_unit/Mram_data1_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[12].event_fifo_unit/Mram_data1_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[11].event_fifo_unit/Mram_data1_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[6].event_fifo_unit/Mram_data1_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[4].event_fifo_unit/Mram_data1_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[3].event_fifo_unit/Mram_data1_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[10].event_fifo_unit/Mram_data5_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[0].event_fifo_unit/Mram_data5_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[2].event_fifo_unit/Mram_data5_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[9].event_fifo_unit/Mram_data12_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[12].event_fifo_unit/Mram_data12_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[6].event_fifo_unit/Mram_data12_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[3].event_fifo_unit/Mram_data12_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[7].event_fifo_unit/Mram_data12_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[5].event_fifo_unit/Mram_data12_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[2].event_fifo_unit/Mram_data11_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[10].event_fifo_unit/Mram_data11_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[12].event_fifo_unit/Mram_data11_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[4].event_fifo_unit/Mram_data11_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[0].event_fifo_unit/Mram_data11_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[15].event_fifo_unit/Mram_data10_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[13].event_fifo_unit/Mram_data10_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[1].event_fifo_unit/Mram_data10_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[2].event_fifo_unit/Mram_data1_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[15].event_fifo_unit/Mram_data1_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[13].event_fifo_unit/Mram_data1_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[10].event_fifo_unit/Mram_data1_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[8].event_fifo_unit/Mram_data1_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[0].event_fifo_unit/Mram_data1_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[14].event_fifo_unit/Mram_data12_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[8].event_fifo_unit/Mram_data12_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[13].event_fifo_unit/Mram_data12_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[15].event_fifo_unit/Mram_data12_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[10].event_fifo_unit/Mram_data12_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[11].event_fifo_unit/Mram_data12_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[4].event_fifo_unit/Mram_data12_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[2].event_fifo_unit/Mram_data12_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[15].event_fifo_unit/Mram_data11_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[14].event_fifo_unit/Mram_data11_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[13].event_fifo_unit/Mram_data11_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[0].event_fifo_unit/Mram_data12_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <edge_detect_and_fifo_units[3].event_fifo_unit/Mram_data10_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+
+Section 3 - Informational
+-------------------------
+INFO:Map:284 - Map is running with the multi-threading option on. Map currently
+   supports the use of up to 2 processors. Based on the the user options and
+   machine load, Map will use 2 processors during this run.
+INFO:LIT:243 - Logical network
+   edge_detect_and_fifo_units[15].event_fifo_unit/Mram_data142/SPO has no load.
+INFO:LIT:243 - Logical network
+   edge_detect_and_fifo_units[14].event_fifo_unit/Mram_data142/SPO has no load.
+INFO:LIT:243 - Logical network
+   edge_detect_and_fifo_units[13].event_fifo_unit/Mram_data142/SPO has no load.
+INFO:LIT:243 - Logical network
+   edge_detect_and_fifo_units[12].event_fifo_unit/Mram_data142/SPO has no load.
+INFO:LIT:243 - Logical network
+   edge_detect_and_fifo_units[11].event_fifo_unit/Mram_data142/SPO has no load.
+INFO:LIT:243 - Logical network
+   edge_detect_and_fifo_units[10].event_fifo_unit/Mram_data142/SPO has no load.
+INFO:LIT:243 - Logical network
+   edge_detect_and_fifo_units[9].event_fifo_unit/Mram_data142/SPO has no load.
+INFO:LIT:243 - Logical network
+   edge_detect_and_fifo_units[8].event_fifo_unit/Mram_data142/SPO has no load.
+INFO:LIT:243 - Logical network
+   edge_detect_and_fifo_units[7].event_fifo_unit/Mram_data142/SPO has no load.
+INFO:LIT:243 - Logical network
+   edge_detect_and_fifo_units[6].event_fifo_unit/Mram_data142/SPO has no load.
+INFO:LIT:243 - Logical network
+   edge_detect_and_fifo_units[5].event_fifo_unit/Mram_data142/SPO has no load.
+INFO:LIT:243 - Logical network
+   edge_detect_and_fifo_units[4].event_fifo_unit/Mram_data142/SPO has no load.
+INFO:LIT:243 - Logical network
+   edge_detect_and_fifo_units[3].event_fifo_unit/Mram_data142/SPO has no load.
+INFO:LIT:243 - Logical network
+   edge_detect_and_fifo_units[2].event_fifo_unit/Mram_data142/SPO has no load.
+INFO:LIT:243 - Logical network
+   edge_detect_and_fifo_units[1].event_fifo_unit/Mram_data142/SPO has no load.
+INFO:LIT:243 - Logical network
+   edge_detect_and_fifo_units[0].event_fifo_unit/Mram_data142/SPO has no load.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:MapLib:841 - Changing COMPENSATION attribute from SYSTEM_SYNCHRONOUS to
+   INTERNAL for PLL_ADV pll_unit/PLL_BASE_inst/PLL_ADV.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
+   1.260 Volts)
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more information, see the TSI report.  Please consult the Xilinx
+   Command Line Tools User Guide for information on generating a TSI report.
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   4 block(s) removed
+  23 block(s) optimized away
+   6 signal(s) removed
+ 194 Block(s) redundant
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "msf_second<1><3>" is unused and has been removed.
+The signal "_n5571<5>" is unused and has been removed.
+The signal "N88" is unused and has been removed.
+ Unused block "Mmux__n60107_SW0" (ROM) removed.
+The signal "N106" is unused and has been removed.
+ Unused block "Mmux__n55717_SW0" (ROM) removed.
+The signal "N849" is unused and has been removed.
+ Unused block "Mmux__n56114_G" (ROM) removed.
+The signal "N851" is unused and has been removed.
+ Unused block "Mmux__n56111_G" (ROM) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+LUT6 		Mmux__n557111
+   optimized to 0
+LUT3 		Mmux__n55713_SW0
+   optimized to 1
+LUT6 		Mmux__n557161
+   optimized to 1
+LUT3 		Mmux__n56112_SW0
+   optimized to 1
+LUT2 		Mmux__n56115_SW0
+   optimized to 0
+LUT2 		Mmux__n56116_SW0
+   optimized to 1
+GND 		XST_GND
+VCC 		XST_VCC
+GND 		msf_bits_unit/XST_GND
+VCC 		msf_bits_unit/XST_VCC
+FDE 		msf_buf_second_1_3
+   optimized to 0
+FDE 		msf_buf_year_2_0
+   optimized to 0
+FDE 		msf_buf_year_2_1
+   optimized to 0
+FDE 		msf_buf_year_2_2
+   optimized to 0
+FDE 		msf_buf_year_2_3
+   optimized to 0
+FDE 		msf_buf_year_3_0
+   optimized to 0
+FDE 		msf_buf_year_3_2
+   optimized to 0
+FDE 		msf_buf_year_3_3
+   optimized to 0
+GND 		msf_decode_unit/XST_GND
+VCC 		msf_decode_unit/XST_VCC
+GND 		msf_sync_unit/XST_GND
+VCC 		msf_sync_unit/XST_VCC
+FDE 		so_data_38_5
+   optimized to 1
+
+Redundant Block(s):
+TYPE 		BLOCK
+LUT1 		uptime_unit/Mcount_n_ctr_cy<1>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<2>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<3>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<4>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<5>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<6>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<7>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<8>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<9>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<10>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<11>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<12>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<13>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<14>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<15>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<16>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<17>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<18>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<19>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<20>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<21>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<22>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<23>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<24>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<25>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<26>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<27>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<28>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<29>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<30>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<31>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<32>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<33>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<34>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<35>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<36>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<37>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<38>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<39>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<40>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<41>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<42>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<43>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<44>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<45>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<46>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<47>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<48>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<49>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<50>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<51>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<52>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<53>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<54>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<55>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<56>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<57>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<58>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_cy<59>_rt
+LUT1 		serial_fifo_unit/Mcount_rpos_cy<1>_rt
+LUT1 		serial_fifo_unit/Mcount_rpos_cy<2>_rt
+LUT1 		serial_fifo_unit/Mcount_rpos_cy<3>_rt
+LUT1 		serial_fifo_unit/Mcount_rpos_cy<4>_rt
+LUT1 		serial_fifo_unit/Mcount_rpos_cy<5>_rt
+LUT1 		serial_fifo_unit/Mcount_rpos_cy<6>_rt
+LUT1 		serial_fifo_unit/Mcount_rpos_cy<7>_rt
+LUT1 		serial_fifo_unit/Mcount_rpos_cy<8>_rt
+LUT1 		ssg_unit/Mcount_counter_cy<1>_rt
+LUT1 		ssg_unit/Mcount_counter_cy<2>_rt
+LUT1 		ssg_unit/Mcount_counter_cy<3>_rt
+LUT1 		ssg_unit/Mcount_counter_cy<4>_rt
+LUT1 		ssg_unit/Mcount_counter_cy<5>_rt
+LUT1 		ssg_unit/Mcount_counter_cy<6>_rt
+LUT1 		ssg_unit/Mcount_counter_cy<7>_rt
+LUT1 		ssg_unit/Mcount_counter_cy<8>_rt
+LUT1 		ssg_unit/Mcount_counter_cy<9>_rt
+LUT1 		ssg_unit/Mcount_counter_cy<10>_rt
+LUT1 		ssg_unit/Mcount_counter_cy<11>_rt
+LUT1 		ssg_unit/Mcount_counter_cy<12>_rt
+LUT1 		ssg_unit/Mcount_counter_cy<13>_rt
+LUT1 		ssg_unit/Mcount_counter_cy<14>_rt
+LUT1 		ssg_unit/Mcount_counter_cy<15>_rt
+LUT1 		ssg_unit/Mcount_counter_cy<16>_rt
+LUT1 		ssg_unit/Mcount_counter_cy<17>_rt
+LUT1 		serial_port_unit/Madd_cnt[11]_GND_16_o_add_10_OUT_cy<10>_rt
+LUT1 		serial_port_unit/Madd_cnt[11]_GND_16_o_add_10_OUT_cy<9>_rt
+LUT1 		serial_port_unit/Madd_cnt[11]_GND_16_o_add_10_OUT_cy<8>_rt
+LUT1 		serial_port_unit/Madd_cnt[11]_GND_16_o_add_10_OUT_cy<7>_rt
+LUT1 		serial_port_unit/Madd_cnt[11]_GND_16_o_add_10_OUT_cy<6>_rt
+LUT1 		serial_port_unit/Madd_cnt[11]_GND_16_o_add_10_OUT_cy<5>_rt
+LUT1 		serial_port_unit/Madd_cnt[11]_GND_16_o_add_10_OUT_cy<4>_rt
+LUT1 		serial_port_unit/Madd_cnt[11]_GND_16_o_add_10_OUT_cy<3>_rt
+LUT1 		serial_port_unit/Madd_cnt[11]_GND_16_o_add_10_OUT_cy<2>_rt
+LUT1 		serial_port_unit/Madd_cnt[11]_GND_16_o_add_10_OUT_cy<1>_rt
+LUT1 		dcf_sync_unit/Madd_counter[28]_GND_59_o_add_1_OUT_cy<27>_rt
+LUT1 		dcf_sync_unit/Madd_counter[28]_GND_59_o_add_1_OUT_xor<28>_rt
+LUT1 		dcf_sync_unit/Madd_counter[28]_GND_59_o_add_1_OUT_cy<26>_rt
+LUT1 		dcf_sync_unit/Madd_counter[28]_GND_59_o_add_1_OUT_cy<25>_rt
+LUT1 		dcf_sync_unit/Madd_counter[28]_GND_59_o_add_1_OUT_cy<24>_rt
+LUT1 		dcf_sync_unit/Madd_counter[28]_GND_59_o_add_1_OUT_cy<23>_rt
+LUT1 		dcf_sync_unit/Madd_counter[28]_GND_59_o_add_1_OUT_cy<22>_rt
+LUT1 		dcf_sync_unit/Madd_counter[28]_GND_59_o_add_1_OUT_cy<21>_rt
+LUT1 		dcf_sync_unit/Madd_counter[28]_GND_59_o_add_1_OUT_cy<20>_rt
+LUT1 		dcf_sync_unit/Madd_counter[28]_GND_59_o_add_1_OUT_cy<19>_rt
+LUT1 		dcf_sync_unit/Madd_counter[28]_GND_59_o_add_1_OUT_cy<18>_rt
+LUT1 		dcf_sync_unit/Madd_counter[28]_GND_59_o_add_1_OUT_cy<17>_rt
+LUT1 		dcf_sync_unit/Madd_counter[28]_GND_59_o_add_1_OUT_cy<16>_rt
+LUT1 		dcf_sync_unit/Madd_counter[28]_GND_59_o_add_1_OUT_cy<15>_rt
+LUT1 		dcf_sync_unit/Madd_counter[28]_GND_59_o_add_1_OUT_cy<14>_rt
+LUT1 		dcf_sync_unit/Madd_counter[28]_GND_59_o_add_1_OUT_cy<13>_rt
+LUT1 		dcf_sync_unit/Madd_counter[28]_GND_59_o_add_1_OUT_cy<12>_rt
+LUT1 		dcf_sync_unit/Madd_counter[28]_GND_59_o_add_1_OUT_cy<11>_rt
+LUT1 		dcf_sync_unit/Madd_counter[28]_GND_59_o_add_1_OUT_cy<10>_rt
+LUT1 		dcf_sync_unit/Madd_counter[28]_GND_59_o_add_1_OUT_cy<9>_rt
+LUT1 		dcf_sync_unit/Madd_counter[28]_GND_59_o_add_1_OUT_cy<8>_rt
+LUT1 		dcf_sync_unit/Madd_counter[28]_GND_59_o_add_1_OUT_cy<7>_rt
+LUT1 		dcf_sync_unit/Madd_counter[28]_GND_59_o_add_1_OUT_cy<6>_rt
+LUT1 		dcf_sync_unit/Madd_counter[28]_GND_59_o_add_1_OUT_cy<5>_rt
+LUT1 		dcf_sync_unit/Madd_counter[28]_GND_59_o_add_1_OUT_cy<4>_rt
+LUT1 		dcf_sync_unit/Madd_counter[28]_GND_59_o_add_1_OUT_cy<3>_rt
+LUT1 		dcf_sync_unit/Madd_counter[28]_GND_59_o_add_1_OUT_cy<2>_rt
+LUT1 		dcf_sync_unit/Madd_counter[28]_GND_59_o_add_1_OUT_cy<1>_rt
+LUT1 		uptime_unit/Mcount_n_ctr_xor<60>_rt
+LUT1 		serial_fifo_unit/Mcount_rpos_xor<9>_rt
+LUT1 		ssg_unit/Mcount_counter_xor<18>_rt
+LUT1 		serial_port_unit/Madd_cnt[11]_GND_16_o_add_10_OUT_xor<11>_rt
+INV 		sf_rd<1>_inv_INV_0
+LUT1 		msf_sync_unit/Madd_cnt[28]_GND_7_o_add_0_OUT_cy<1>_rt
+LUT1 		msf_sync_unit/Madd_cnt[28]_GND_7_o_add_0_OUT_cy<2>_rt
+LUT1 		msf_sync_unit/Madd_cnt[28]_GND_7_o_add_0_OUT_cy<3>_rt
+LUT1 		msf_sync_unit/Madd_cnt[28]_GND_7_o_add_0_OUT_cy<4>_rt
+LUT1 		msf_sync_unit/Madd_cnt[28]_GND_7_o_add_0_OUT_cy<5>_rt
+LUT1 		msf_sync_unit/Madd_cnt[28]_GND_7_o_add_0_OUT_cy<6>_rt
+LUT1 		msf_sync_unit/Madd_cnt[28]_GND_7_o_add_0_OUT_cy<7>_rt
+LUT1 		msf_sync_unit/Madd_cnt[28]_GND_7_o_add_0_OUT_cy<8>_rt
+LUT1 		msf_sync_unit/Madd_cnt[28]_GND_7_o_add_0_OUT_cy<9>_rt
+LUT1 		msf_sync_unit/Madd_cnt[28]_GND_7_o_add_0_OUT_cy<10>_rt
+LUT1 		msf_sync_unit/Madd_cnt[28]_GND_7_o_add_0_OUT_cy<11>_rt
+LUT1 		msf_sync_unit/Madd_cnt[28]_GND_7_o_add_0_OUT_cy<12>_rt
+LUT1 		msf_sync_unit/Madd_cnt[28]_GND_7_o_add_0_OUT_cy<13>_rt
+LUT1 		msf_sync_unit/Madd_cnt[28]_GND_7_o_add_0_OUT_cy<14>_rt
+LUT1 		msf_sync_unit/Madd_cnt[28]_GND_7_o_add_0_OUT_cy<15>_rt
+LUT1 		msf_sync_unit/Madd_cnt[28]_GND_7_o_add_0_OUT_cy<16>_rt
+LUT1 		msf_sync_unit/Madd_cnt[28]_GND_7_o_add_0_OUT_cy<17>_rt
+LUT1 		msf_sync_unit/Madd_cnt[28]_GND_7_o_add_0_OUT_cy<18>_rt
+LUT1 		msf_sync_unit/Madd_cnt[28]_GND_7_o_add_0_OUT_cy<19>_rt
+LUT1 		msf_sync_unit/Madd_cnt[28]_GND_7_o_add_0_OUT_cy<20>_rt
+LUT1 		msf_sync_unit/Madd_cnt[28]_GND_7_o_add_0_OUT_cy<21>_rt
+LUT1 		msf_sync_unit/Madd_cnt[28]_GND_7_o_add_0_OUT_cy<22>_rt
+LUT1 		msf_sync_unit/Madd_cnt[28]_GND_7_o_add_0_OUT_cy<23>_rt
+LUT1 		msf_sync_unit/Madd_cnt[28]_GND_7_o_add_0_OUT_cy<24>_rt
+LUT1 		msf_sync_unit/Madd_cnt[28]_GND_7_o_add_0_OUT_cy<25>_rt
+LUT1 		msf_sync_unit/Madd_cnt[28]_GND_7_o_add_0_OUT_cy<26>_rt
+LUT1 		msf_sync_unit/Madd_cnt[28]_GND_7_o_add_0_OUT_cy<27>_rt
+LUT1 		msf_sync_unit/Madd_cnt[28]_GND_7_o_add_0_OUT_xor<28>_rt
+LUT1 		msf_sync_unit/state_FSM_FFd2-In_SW0_SW0_cy_rt
+LUT1 		msf_bits_unit/Mcount_cnt_cy<1>_rt
+LUT1 		msf_bits_unit/Mcount_cnt_cy<2>_rt
+LUT1 		msf_bits_unit/Mcount_cnt_cy<3>_rt
+LUT1 		msf_bits_unit/Mcount_cnt_cy<4>_rt
+LUT1 		msf_bits_unit/Mcount_cnt_cy<5>_rt
+LUT1 		msf_bits_unit/Mcount_cnt_cy<6>_rt
+LUT1 		msf_bits_unit/Mcount_cnt_cy<7>_rt
+LUT1 		msf_bits_unit/Mcount_cnt_cy<8>_rt
+LUT1 		msf_bits_unit/Mcount_cnt_cy<9>_rt
+LUT1 		msf_bits_unit/Mcount_cnt_cy<10>_rt
+LUT1 		msf_bits_unit/Mcount_cnt_cy<11>_rt
+LUT1 		msf_bits_unit/Mcount_cnt_cy<12>_rt
+LUT1 		msf_bits_unit/Mcount_cnt_cy<13>_rt
+LUT1 		msf_bits_unit/Mcount_cnt_cy<14>_rt
+LUT1 		msf_bits_unit/Mcount_cnt_cy<15>_rt
+LUT1 		msf_bits_unit/Mcount_cnt_cy<16>_rt
+LUT1 		msf_bits_unit/Mcount_cnt_cy<17>_rt
+LUT1 		msf_bits_unit/Mcount_cnt_cy<18>_rt
+LUT1 		msf_bits_unit/Mcount_cnt_cy<19>_rt
+LUT1 		msf_bits_unit/Mcount_cnt_cy<20>_rt
+LUT1 		msf_bits_unit/Mcount_cnt_cy<21>_rt
+LUT1 		msf_bits_unit/Mcount_cnt_cy<22>_rt
+LUT1 		msf_bits_unit/Mcount_cnt_cy<23>_rt
+LUT1 		msf_bits_unit/Mcount_cnt_cy<24>_rt
+LUT1 		msf_bits_unit/Mcount_cnt_cy<25>_rt
+LUT1 		msf_bits_unit/Mcount_cnt_cy<26>_rt
+LUT1 		msf_bits_unit/Mcount_cnt_cy<27>_rt
+LUT1 		msf_bits_unit/Mcount_cnt_xor<28>_rt
+LUT2 		msf_bits_unit/Mcount_cnt_val291
+LUT2 		msf_decode_unit/Mcount_cnt_val1
+LUT4 		Mmux__n55712_SW0
+LUT6 		Mmux__n55717
+LUT6 		Mmux__n55713
+LUT6 		Mmux__n557141
+LUT6 		Mmux__n56117
+LUT6 		Mmux__n56112
+MUXF7 		Mmux__n56111
+MUXF7 		Mmux__n56114
+
+Section 11 - Timing Report
+--------------------------
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more 
+   information, see the TSI report.  Please consult the Xilinx Command Line 
+   Tools User Guide for information on generating a TSI report.
+INFO:Timing:3284 - This timing report was generated using estimated delay 
+   information.  For accurate numbers, please refer to the post Place and Route 
+   timing report.
+Number of Timing Constraints that were not applied: 5
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+* TS_pll_unit_plbsclk1 = PERIOD TIMEGRP "pl | SETUP       |    -0.610ns|     6.440ns|       8|        4880
+  l_unit_plbsclk1" TS_sys_clk_pin * 2.5 HIG | HOLD        |     0.257ns|            |       0|           0
+  H 50%                                     |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+* TS_pll_unit_plbsclk2 = PERIOD TIMEGRP "pl | SETUP       |     2.171ns|     3.658ns|       0|           0
+  l_unit_plbsclk2" TS_sys_clk_pin * 1.25 HI | HOLD        |    -0.095ns|            |    3328|      242944
+  GH 50%                                    |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_ | MINLOWPULSE |     6.666ns|     3.334ns|       0|           0
+  pin" 100 MHz HIGH 50%                     |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_sys_clk_250_MHz = PERIOD TIMEGRP "sys_ | MINPERIOD   |     2.941ns|     1.059ns|       0|           0
+  clk_250_MHz" 250 MHz HIGH 50%             |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_sys_clk_125_MHz = PERIOD TIMEGRP "sys_ | MINPERIOD   |     4.876ns|     3.124ns|       0|           0
+  clk_125_MHz" 125 MHz HIGH 50%             |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_sys_clk_1000_MHz = PERIOD TIMEGRP "sys | N/A         |         N/A|         N/A|     N/A|         N/A
+  _clk_1000_MHz" 1000 MHz HIGH 50%          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_pll_unit_plbsclko = PERIOD TIMEGRP "pl | N/A         |         N/A|         N/A|     N/A|         N/A
+  l_unit_plbsclko" TS_sys_clk_pin * 10 HIGH |             |            |            |        |            
+   50%                                      |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Review Timing Report for more details on the following derived constraints.
+To create a Timing Report, run "trce -v 12 -fastpaths -o design_timing_report design.ncd design.pcf"
+or "Run Timing Analysis" from Timing Analyzer (timingan).
+Derived Constraints for TS_sys_clk_pin
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_sys_clk_pin                 |     10.000ns|      3.334ns|     16.100ns|            0|         3336|            0|       273773|
+| TS_pll_unit_plbsclk1          |      4.000ns|      6.440ns|          N/A|            8|            0|          144|            0|
+| TS_pll_unit_plbsclko          |      1.000ns|          N/A|          N/A|            0|            0|            0|            0|
+| TS_pll_unit_plbsclk2          |      8.000ns|      3.658ns|          N/A|         3328|            0|       273629|            0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+2 constraints not met.
+INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
+   constraint is not analyzed due to the following: No paths covered by this 
+   constraint; Other constraints intersect with this constraint; or This 
+   constraint was disabled by a Path Tracing Control. Please run the Timespec 
+   Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.
+
+
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| an<0>                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| an<1>                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| an<2>                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| an<3>                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| btnc                               | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| btnd                               | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| btnl                               | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| btnr                               | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| btnu                               | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| clkin                              | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| dcf                                | IOB              | INPUT     | LVCMOS33             |       |          |      | ISERDES      |          |          |
+| ka<0>                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| ka<1>                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| ka<2>                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| ka<3>                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| ka<4>                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| ka<5>                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| ka<6>                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| ka<7>                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| ld<0>                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST | OFF          |          |          |
+| ld<1>                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST | OFF          |          |          |
+| ld<2>                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST | OFF          |          |          |
+| ld<3>                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST | OFF          |          |          |
+| ld<4>                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST | OFF          |          |          |
+| ld<5>                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST | OFF          |          |          |
+| ld<6>                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST | OFF          |          |          |
+| ld<7>                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST | OFF          |          |          |
+| msf                                | IOB              | INPUT     | LVCMOS33             |       |          |      | ISERDES      |          |          |
+| rx                                 | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| sw<0>                              | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| sw<1>                              | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| sw<2>                              | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| sw<3>                              | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| sw<4>                              | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| sw<5>                              | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| sw<6>                              | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| sw<7>                              | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| tx                                 | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+PLL_ADV "pll_unit/PLL_BASE_inst/PLL_ADV":
+BANDWIDTH:OPTIMIZED
+CLK_FEEDBACK:CLKFBOUT
+COMPENSATION:INTERNAL
+PLL_ADD_LEAKAGE:2
+PLL_AVDD_COMP_SET:2
+PLL_CLAMP_BYPASS:FALSE
+PLL_CLAMP_REF_SEL:1
+PLL_CLK0MX:0
+PLL_CLK1MX:0
+PLL_CLK2MX:0
+PLL_CLK3MX:0
+PLL_CLK4MX:0
+PLL_CLK5MX:0
+PLL_CLKBURST_CNT:0
+PLL_CLKBURST_ENABLE:TRUE
+PLL_CLKCNTRL:0
+PLL_CLKFBMX:0
+PLL_CLKFBOUT2_EDGE:TRUE
+PLL_CLKFBOUT2_NOCOUNT:TRUE
+PLL_CLKFBOUT_EDGE:TRUE
+PLL_CLKFBOUT_EN:FALSE
+PLL_CLKFBOUT_NOCOUNT:TRUE
+PLL_CLKOUT0_EDGE:TRUE
+PLL_CLKOUT0_EN:FALSE
+PLL_CLKOUT0_NOCOUNT:TRUE
+PLL_CLKOUT1_EDGE:TRUE
+PLL_CLKOUT1_EN:FALSE
+PLL_CLKOUT1_NOCOUNT:TRUE
+PLL_CLKOUT2_EDGE:TRUE
+PLL_CLKOUT2_EN:FALSE
+PLL_CLKOUT2_NOCOUNT:TRUE
+PLL_CLKOUT3_EDGE:TRUE
+PLL_CLKOUT3_EN:FALSE
+PLL_CLKOUT3_NOCOUNT:TRUE
+PLL_CLKOUT4_EDGE:TRUE
+PLL_CLKOUT4_EN:FALSE
+PLL_CLKOUT4_NOCOUNT:TRUE
+PLL_CLKOUT5_EDGE:TRUE
+PLL_CLKOUT5_EN:FALSE
+PLL_CLKOUT5_NOCOUNT:TRUE
+PLL_CLK_LOST_DETECT:FALSE
+PLL_CP:1
+PLL_CP_BIAS_TRIP_SHIFT:TRUE
+PLL_CP_REPL:1
+PLL_CP_RES:0
+PLL_DIRECT_PATH_CNTRL:TRUE
+PLL_DIVCLK_EDGE:TRUE
+PLL_DIVCLK_NOCOUNT:TRUE
+PLL_DVDD_COMP_SET:2
+PLL_EN:FALSE
+PLL_EN_DLY:TRUE
+PLL_EN_LEAKAGE:2
+PLL_EN_TCLK0:TRUE
+PLL_EN_TCLK1:TRUE
+PLL_EN_TCLK2:TRUE
+PLL_EN_TCLK3:TRUE
+PLL_EN_VCO0:FALSE
+PLL_EN_VCO1:FALSE
+PLL_EN_VCO2:FALSE
+PLL_EN_VCO3:FALSE
+PLL_EN_VCO4:FALSE
+PLL_EN_VCO5:FALSE
+PLL_EN_VCO6:FALSE
+PLL_EN_VCO7:FALSE
+PLL_EN_VCO_DIV1:FALSE
+PLL_EN_VCO_DIV6:TRUE
+PLL_INTFB:0
+PLL_IO_CLKSRC:0
+PLL_LFHF:3
+PLL_LOCK_FB_DLY:3
+PLL_LOCK_REF_DLY:5
+PLL_MAN_LF_EN:TRUE
+PLL_NBTI_EN:TRUE
+PLL_PFD_CNTRL:8
+PLL_PFD_DLY:1
+PLL_PWRD_CFG:FALSE
+PLL_REG_INPUT:TRUE
+PLL_RES:1
+PLL_SEL_SLIPD:FALSE
+PLL_SKEW_CNTRL:0
+PLL_TEST_IN_WINDOW:FALSE
+PLL_VDD_SEL:0
+PLL_VLFHIGH_DIS:TRUE
+CLKFBOUT_MULT = 10
+CLKFBOUT_PHASE = 0.0
+CLKIN1_PERIOD = 10.000000
+CLKIN2_PERIOD = 0
+CLKOUT0_DIVIDE = 1
+CLKOUT0_DUTY_CYCLE = 0.5
+CLKOUT0_PHASE = 0.0
+CLKOUT1_DIVIDE = 4
+CLKOUT1_DUTY_CYCLE = 0.5
+CLKOUT1_PHASE = 0.0
+CLKOUT2_DIVIDE = 8
+CLKOUT2_DUTY_CYCLE = 0.5
+CLKOUT2_PHASE = 0.0
+CLKOUT3_DIVIDE = 8
+CLKOUT3_DUTY_CYCLE = 0.5
+CLKOUT3_PHASE = 0.0
+CLKOUT4_DIVIDE = 8
+CLKOUT4_DUTY_CYCLE = 0.5
+CLKOUT4_PHASE = 0.0
+CLKOUT5_DIVIDE = 8
+CLKOUT5_DUTY_CYCLE = 0.5
+CLKOUT5_PHASE = 0.0
+DIVCLK_DIVIDE = 1
+REF_JITTER = 0.1
+
+
+
+Section 12 - Control Set Information
+------------------------------------
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Clock Signal | Reset Signal                          | Set Signal | Enable Signal                                                    | Slice Load Count | Bel Load Count |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| clk_125_MHz  |                                       |            |                                                                  | 142              | 466            |
+| clk_125_MHz  |                                       |            | GLOBAL_LOGIC1                                                    | 2                | 6              |
+| clk_125_MHz  |                                       |            | _n4138_inv                                                       | 144              | 262            |
+| clk_125_MHz  |                                       |            | dcf_bits_unit/_n0034_inv                                         | 7                | 26             |
+| clk_125_MHz  |                                       |            | dcf_bits_unit/current_state_FSM_FFd1                             | 17               | 62             |
+| clk_125_MHz  |                                       |            | dcf_decode_unit/_n0222_inv                                       | 10               | 39             |
+| clk_125_MHz  |                                       |            | dcf_mo                                                           | 21               | 94             |
+| clk_125_MHz  |                                       |            | dcf_so                                                           | 16               | 61             |
+| clk_125_MHz  |                                       |            | dcf_sync_unit/current_state                                      | 42               | 134            |
+| clk_125_MHz  |                                       |            | edge_detect_and_fifo_units[0].event_fifo_unit/rd_fe_int_AND_4_o  | 15               | 83             |
+| clk_125_MHz  |                                       |            | edge_detect_and_fifo_units[0].event_fifo_unit/wr_ff_int_AND_3_o  | 16               | 110            |
+| clk_125_MHz  |                                       |            | edge_detect_and_fifo_units[10].event_fifo_unit/rd_fe_int_AND_4_o | 15               | 83             |
+| clk_125_MHz  |                                       |            | edge_detect_and_fifo_units[10].event_fifo_unit/wr_ff_int_AND_3_o | 16               | 110            |
+| clk_125_MHz  |                                       |            | edge_detect_and_fifo_units[11].event_fifo_unit/rd_fe_int_AND_4_o | 15               | 83             |
+| clk_125_MHz  |                                       |            | edge_detect_and_fifo_units[11].event_fifo_unit/wr_ff_int_AND_3_o | 16               | 110            |
+| clk_125_MHz  |                                       |            | edge_detect_and_fifo_units[12].event_fifo_unit/rd_fe_int_AND_4_o | 15               | 83             |
+| clk_125_MHz  |                                       |            | edge_detect_and_fifo_units[12].event_fifo_unit/wr_ff_int_AND_3_o | 15               | 110            |
+| clk_125_MHz  |                                       |            | edge_detect_and_fifo_units[13].event_fifo_unit/rd_fe_int_AND_4_o | 15               | 83             |
+| clk_125_MHz  |                                       |            | edge_detect_and_fifo_units[13].event_fifo_unit/wr_ff_int_AND_3_o | 16               | 110            |
+| clk_125_MHz  |                                       |            | edge_detect_and_fifo_units[14].event_fifo_unit/rd_fe_int_AND_4_o | 15               | 83             |
+| clk_125_MHz  |                                       |            | edge_detect_and_fifo_units[14].event_fifo_unit/wr_ff_int_AND_3_o | 16               | 110            |
+| clk_125_MHz  |                                       |            | edge_detect_and_fifo_units[15].event_fifo_unit/rd_fe_int_AND_4_o | 15               | 83             |
+| clk_125_MHz  |                                       |            | edge_detect_and_fifo_units[15].event_fifo_unit/wr_ff_int_AND_3_o | 16               | 110            |
+| clk_125_MHz  |                                       |            | edge_detect_and_fifo_units[1].event_fifo_unit/rd_fe_int_AND_4_o  | 15               | 83             |
+| clk_125_MHz  |                                       |            | edge_detect_and_fifo_units[1].event_fifo_unit/wr_ff_int_AND_3_o  | 16               | 110            |
+| clk_125_MHz  |                                       |            | edge_detect_and_fifo_units[2].event_fifo_unit/rd_fe_int_AND_4_o  | 15               | 83             |
+| clk_125_MHz  |                                       |            | edge_detect_and_fifo_units[2].event_fifo_unit/wr_ff_int_AND_3_o  | 16               | 110            |
+| clk_125_MHz  |                                       |            | edge_detect_and_fifo_units[3].event_fifo_unit/rd_fe_int_AND_4_o  | 15               | 83             |
+| clk_125_MHz  |                                       |            | edge_detect_and_fifo_units[3].event_fifo_unit/wr_ff_int_AND_3_o  | 16               | 110            |
+| clk_125_MHz  |                                       |            | edge_detect_and_fifo_units[4].event_fifo_unit/rd_fe_int_AND_4_o  | 15               | 83             |
+| clk_125_MHz  |                                       |            | edge_detect_and_fifo_units[4].event_fifo_unit/wr_ff_int_AND_3_o  | 16               | 110            |
+| clk_125_MHz  |                                       |            | edge_detect_and_fifo_units[5].event_fifo_unit/rd_fe_int_AND_4_o  | 15               | 83             |
+| clk_125_MHz  |                                       |            | edge_detect_and_fifo_units[5].event_fifo_unit/wr_ff_int_AND_3_o  | 16               | 110            |
+| clk_125_MHz  |                                       |            | edge_detect_and_fifo_units[6].event_fifo_unit/rd_fe_int_AND_4_o  | 15               | 83             |
+| clk_125_MHz  |                                       |            | edge_detect_and_fifo_units[6].event_fifo_unit/wr_ff_int_AND_3_o  | 16               | 110            |
+| clk_125_MHz  |                                       |            | edge_detect_and_fifo_units[7].event_fifo_unit/rd_fe_int_AND_4_o  | 15               | 83             |
+| clk_125_MHz  |                                       |            | edge_detect_and_fifo_units[7].event_fifo_unit/wr_ff_int_AND_3_o  | 16               | 110            |
+| clk_125_MHz  |                                       |            | edge_detect_and_fifo_units[8].event_fifo_unit/rd_fe_int_AND_4_o  | 15               | 83             |
+| clk_125_MHz  |                                       |            | edge_detect_and_fifo_units[8].event_fifo_unit/wr_ff_int_AND_3_o  | 16               | 110            |
+| clk_125_MHz  |                                       |            | edge_detect_and_fifo_units[9].event_fifo_unit/rd_fe_int_AND_4_o  | 15               | 83             |
+| clk_125_MHz  |                                       |            | edge_detect_and_fifo_units[9].event_fifo_unit/wr_ff_int_AND_3_o  | 16               | 110            |
+| clk_125_MHz  |                                       |            | global_fifo_unit/BUS_0081                                        | 2                | 6              |
+| clk_125_MHz  |                                       |            | ld_ed[0]_ld_ed[15]_OR_137_o                                      | 4                | 28             |
+| clk_125_MHz  |                                       |            | msf_bo_tr                                                        | 18               | 63             |
+| clk_125_MHz  |                                       |            | msf_decode_unit/si_GND_7_o_MUX_194_o                             | 20               | 70             |
+| clk_125_MHz  |                                       |            | msf_dt_tr                                                        | 28               | 109            |
+| clk_125_MHz  |                                       |            | msf_mo                                                           | 15               | 61             |
+| clk_125_MHz  |                                       |            | msf_so                                                           | 16               | 61             |
+| clk_125_MHz  |                                       |            | serial_fifo_unit/BUS_0009                                        | 3                | 10             |
+| clk_125_MHz  |                                       |            | serial_port_unit/_n0069_inv                                      | 2                | 8              |
+| clk_125_MHz  |                                       |            | serial_port_unit/next_cnt[11]_GND_16_o_OR_40_o                   | 1                | 1              |
+| clk_125_MHz  |                                       |            | slow_io_units[15].ddrserdes_unit/current_state_FSM_FFd3          | 13               | 28             |
+| clk_125_MHz  | Mmux_so_cnt[6]_so_cnt[6]_mux_523_OUT2 |            |                                                                  | 2                | 4              |
+| clk_125_MHz  | dcf_buf_bo_ack                        |            |                                                                  | 1                | 1              |
+| clk_125_MHz  | dcf_buf_dt_ack                        |            |                                                                  | 1                | 1              |
+| clk_125_MHz  | dcf_buf_mo_ack                        |            |                                                                  | 1                | 1              |
+| clk_125_MHz  | dcf_buf_so_ack                        |            |                                                                  | 1                | 1              |
+| clk_125_MHz  | dcf_mo                                |            |                                                                  | 1                | 1              |
+| clk_125_MHz  | dcf_sync_unit/_n0047                  |            |                                                                  | 7                | 28             |
+| clk_125_MHz  | dcf_sync_unit/_n0053                  |            |                                                                  | 1                | 1              |
+| clk_125_MHz  | dcf_sync_unit/current_state           |            |                                                                  | 1                | 1              |
+| clk_125_MHz  | ex_ptr[0][3]_ef_fe[15]_Mux_236_o      |            |                                                                  | 2                | 16             |
+| clk_125_MHz  | ex_wr<2>_inv                          |            |                                                                  | 79               | 79             |
+| clk_125_MHz  | global_fifo_unit/_n0078               |            | global_fifo_unit/rd_fe_int_AND_6_o                               | 1                | 6              |
+| clk_125_MHz  | msf_buf_bo_ack                        |            |                                                                  | 1                | 1              |
+| clk_125_MHz  | msf_buf_dt_ack                        |            |                                                                  | 1                | 1              |
+| clk_125_MHz  | msf_buf_mo_ack                        |            |                                                                  | 1                | 1              |
+| clk_125_MHz  | msf_buf_so_ack                        |            |                                                                  | 1                | 1              |
+| clk_125_MHz  | msf_mo                                |            | msf_decode_unit/_n0568_inv                                       | 2                | 3              |
+| clk_125_MHz  | msf_mo                                |            | msf_decode_unit/si1                                              | 1                | 4              |
+| clk_125_MHz  | msf_mo                                |            | msf_so                                                           | 5                | 8              |
+| clk_125_MHz  | msf_so                                |            |                                                                  | 8                | 29             |
+| clk_125_MHz  | msf_sync_unit/state<0>_inv_0          |            |                                                                  | 1                | 1              |
+| clk_125_MHz  | msf_sync_unit/state<1>_inv_0          |            |                                                                  | 1                | 1              |
+| clk_125_MHz  | serial_fifo_unit/_n0050               |            | serial_fifo_unit/rd_fe_int_AND_2_o                               | 3                | 10             |
+| clk_125_MHz  | serial_port_unit/_n0060               |            | serial_port_unit/_n00601                                         | 1                | 3              |
+| clk_125_MHz  | so_cnt[6]_PWR_7_o_equal_275_o_inv     |            |                                                                  | 1                | 1              |
+| clk_125_MHz  | ssg_unit/_n0029                       |            | ssg_wr_inv                                                       | 5                | 19             |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| clk_250_MHz  |                                       |            |                                                                  | 8                | 28             |
+| clk_250_MHz  |                                       |            | slow_io_units[15].ddrserdes_unit/current_state_FSM_FFd1          | 12               | 28             |
+| clk_250_MHz  |                                       |            | slow_io_units[15].ddrserdes_unit/current_state_FSM_FFd3          | 13               | 14             |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Module                                           | Partition | Slices*       | Slice Reg     | LUTs          | LUTRAM        | BRAM/FIFO | DSP48A1 | BUFG  | BUFIO | BUFR  | DCM   | PLL_ADV   | Full Hierarchical Name                                     |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| top_level/                                       |           | 692/1360      | 1019/3274     | 1818/3644     | 5/869         | 0/4       | 0/0     | 0/2   | 0/0   | 0/0   | 0/0   | 0/1       | top_level                                                  |
+| +dcf_bits_unit                                   |           | 11/11         | 28/28         | 35/35         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/dcf_bits_unit                                    |
+| +dcf_decode_unit                                 |           | 41/41         | 105/105       | 114/114       | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/dcf_decode_unit                                  |
+| +dcf_sync_unit                                   |           | 27/27         | 31/31         | 78/78         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/dcf_sync_unit                                    |
+| +edge_detect_and_fifo_units[0].edge_detect_unit  |           | 6/6           | 17/17         | 3/3           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/edge_detect_and_fifo_units[0].edge_detect_unit   |
+| +edge_detect_and_fifo_units[0].event_fifo_unit   |           | 18/18         | 87/87         | 64/64         | 54/54         | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/edge_detect_and_fifo_units[0].event_fifo_unit    |
+| +edge_detect_and_fifo_units[10].edge_detect_unit |           | 6/6           | 17/17         | 3/3           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/edge_detect_and_fifo_units[10].edge_detect_unit  |
+| +edge_detect_and_fifo_units[10].event_fifo_unit  |           | 18/18         | 87/87         | 64/64         | 54/54         | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/edge_detect_and_fifo_units[10].event_fifo_unit   |
+| +edge_detect_and_fifo_units[11].edge_detect_unit |           | 5/5           | 17/17         | 3/3           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/edge_detect_and_fifo_units[11].edge_detect_unit  |
+| +edge_detect_and_fifo_units[11].event_fifo_unit  |           | 18/18         | 87/87         | 64/64         | 54/54         | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/edge_detect_and_fifo_units[11].event_fifo_unit   |
+| +edge_detect_and_fifo_units[12].edge_detect_unit |           | 6/6           | 17/17         | 3/3           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/edge_detect_and_fifo_units[12].edge_detect_unit  |
+| +edge_detect_and_fifo_units[12].event_fifo_unit  |           | 17/17         | 87/87         | 64/64         | 54/54         | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/edge_detect_and_fifo_units[12].event_fifo_unit   |
+| +edge_detect_and_fifo_units[13].edge_detect_unit |           | 5/5           | 17/17         | 3/3           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/edge_detect_and_fifo_units[13].edge_detect_unit  |
+| +edge_detect_and_fifo_units[13].event_fifo_unit  |           | 18/18         | 87/87         | 64/64         | 54/54         | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/edge_detect_and_fifo_units[13].event_fifo_unit   |
+| +edge_detect_and_fifo_units[14].edge_detect_unit |           | 6/6           | 17/17         | 3/3           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/edge_detect_and_fifo_units[14].edge_detect_unit  |
+| +edge_detect_and_fifo_units[14].event_fifo_unit  |           | 17/17         | 87/87         | 64/64         | 54/54         | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/edge_detect_and_fifo_units[14].event_fifo_unit   |
+| +edge_detect_and_fifo_units[15].edge_detect_unit |           | 6/6           | 17/17         | 3/3           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/edge_detect_and_fifo_units[15].edge_detect_unit  |
+| +edge_detect_and_fifo_units[15].event_fifo_unit  |           | 18/18         | 87/87         | 64/64         | 54/54         | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/edge_detect_and_fifo_units[15].event_fifo_unit   |
+| +edge_detect_and_fifo_units[1].edge_detect_unit  |           | 5/5           | 17/17         | 7/7           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/edge_detect_and_fifo_units[1].edge_detect_unit   |
+| +edge_detect_and_fifo_units[1].event_fifo_unit   |           | 18/18         | 87/87         | 64/64         | 54/54         | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/edge_detect_and_fifo_units[1].event_fifo_unit    |
+| +edge_detect_and_fifo_units[2].edge_detect_unit  |           | 5/5           | 17/17         | 7/7           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/edge_detect_and_fifo_units[2].edge_detect_unit   |
+| +edge_detect_and_fifo_units[2].event_fifo_unit   |           | 18/18         | 87/87         | 64/64         | 54/54         | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/edge_detect_and_fifo_units[2].event_fifo_unit    |
+| +edge_detect_and_fifo_units[3].edge_detect_unit  |           | 4/4           | 17/17         | 10/10         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/edge_detect_and_fifo_units[3].edge_detect_unit   |
+| +edge_detect_and_fifo_units[3].event_fifo_unit   |           | 17/17         | 87/87         | 64/64         | 54/54         | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/edge_detect_and_fifo_units[3].event_fifo_unit    |
+| +edge_detect_and_fifo_units[4].edge_detect_unit  |           | 6/6           | 17/17         | 3/3           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/edge_detect_and_fifo_units[4].edge_detect_unit   |
+| +edge_detect_and_fifo_units[4].event_fifo_unit   |           | 17/17         | 87/87         | 64/64         | 54/54         | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/edge_detect_and_fifo_units[4].event_fifo_unit    |
+| +edge_detect_and_fifo_units[5].edge_detect_unit  |           | 5/5           | 17/17         | 3/3           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/edge_detect_and_fifo_units[5].edge_detect_unit   |
+| +edge_detect_and_fifo_units[5].event_fifo_unit   |           | 18/18         | 87/87         | 64/64         | 54/54         | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/edge_detect_and_fifo_units[5].event_fifo_unit    |
+| +edge_detect_and_fifo_units[6].edge_detect_unit  |           | 6/6           | 17/17         | 3/3           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/edge_detect_and_fifo_units[6].edge_detect_unit   |
+| +edge_detect_and_fifo_units[6].event_fifo_unit   |           | 18/18         | 87/87         | 64/64         | 54/54         | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/edge_detect_and_fifo_units[6].event_fifo_unit    |
+| +edge_detect_and_fifo_units[7].edge_detect_unit  |           | 6/6           | 17/17         | 11/11         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/edge_detect_and_fifo_units[7].edge_detect_unit   |
+| +edge_detect_and_fifo_units[7].event_fifo_unit   |           | 18/18         | 87/87         | 64/64         | 54/54         | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/edge_detect_and_fifo_units[7].event_fifo_unit    |
+| +edge_detect_and_fifo_units[8].edge_detect_unit  |           | 5/5           | 17/17         | 3/3           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/edge_detect_and_fifo_units[8].edge_detect_unit   |
+| +edge_detect_and_fifo_units[8].event_fifo_unit   |           | 17/17         | 87/87         | 64/64         | 54/54         | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/edge_detect_and_fifo_units[8].event_fifo_unit    |
+| +edge_detect_and_fifo_units[9].edge_detect_unit  |           | 6/6           | 17/17         | 3/3           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/edge_detect_and_fifo_units[9].edge_detect_unit   |
+| +edge_detect_and_fifo_units[9].event_fifo_unit   |           | 18/18         | 87/87         | 64/64         | 54/54         | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/edge_detect_and_fifo_units[9].event_fifo_unit    |
+| +fast_io_units[0].serdes_unit                    |           | 4/4           | 12/12         | 4/4           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/fast_io_units[0].serdes_unit                     |
+| +fast_io_units[1].serdes_unit                    |           | 3/3           | 13/13         | 5/5           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/fast_io_units[1].serdes_unit                     |
+| +global_fifo_unit                                |           | 8/8           | 12/12         | 16/16         | 0/0           | 3/3       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/global_fifo_unit                                 |
+| +msf_bits_unit                                   |           | 18/18         | 33/33         | 44/44         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/msf_bits_unit                                    |
+| +msf_decode_unit                                 |           | 56/56         | 123/123       | 161/161       | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/msf_decode_unit                                  |
+| +msf_sync_unit                                   |           | 33/33         | 33/33         | 107/107       | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/msf_sync_unit                                    |
+| +pll_unit                                        |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0     | 2/2   | 0/0   | 0/0   | 0/0   | 1/1       | top_level/pll_unit                                         |
+| +serial_fifo_unit                                |           | 11/11         | 20/20         | 28/28         | 0/0           | 1/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/serial_fifo_unit                                 |
+| +serial_port_unit                                |           | 14/14         | 26/26         | 40/40         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/serial_port_unit                                 |
+| +slow_io_units[10].ddrserdes_unit                |           | 3/3           | 5/5           | 4/4           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/slow_io_units[10].ddrserdes_unit                 |
+| +slow_io_units[11].ddrserdes_unit                |           | 3/3           | 5/5           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/slow_io_units[11].ddrserdes_unit                 |
+| +slow_io_units[12].ddrserdes_unit                |           | 3/3           | 5/5           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/slow_io_units[12].ddrserdes_unit                 |
+| +slow_io_units[13].ddrserdes_unit                |           | 3/3           | 5/5           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/slow_io_units[13].ddrserdes_unit                 |
+| +slow_io_units[14].ddrserdes_unit                |           | 3/3           | 5/5           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/slow_io_units[14].ddrserdes_unit                 |
+| +slow_io_units[15].ddrserdes_unit                |           | 4/4           | 8/8           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/slow_io_units[15].ddrserdes_unit                 |
+| +slow_io_units[2].ddrserdes_unit                 |           | 3/3           | 5/5           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/slow_io_units[2].ddrserdes_unit                  |
+| +slow_io_units[3].ddrserdes_unit                 |           | 3/3           | 5/5           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/slow_io_units[3].ddrserdes_unit                  |
+| +slow_io_units[4].ddrserdes_unit                 |           | 3/3           | 5/5           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/slow_io_units[4].ddrserdes_unit                  |
+| +slow_io_units[5].ddrserdes_unit                 |           | 3/3           | 5/5           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/slow_io_units[5].ddrserdes_unit                  |
+| +slow_io_units[6].ddrserdes_unit                 |           | 3/3           | 5/5           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/slow_io_units[6].ddrserdes_unit                  |
+| +slow_io_units[7].ddrserdes_unit                 |           | 3/3           | 5/5           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/slow_io_units[7].ddrserdes_unit                  |
+| +slow_io_units[8].ddrserdes_unit                 |           | 3/3           | 5/5           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/slow_io_units[8].ddrserdes_unit                  |
+| +slow_io_units[9].ddrserdes_unit                 |           | 3/3           | 5/5           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/slow_io_units[9].ddrserdes_unit                  |
+| +ssg_unit                                        |           | 12/12         | 21/21         | 34/34         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/ssg_unit                                         |
+| +uptime_unit                                     |           | 16/16         | 61/61         | 61/61         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/uptime_unit                                      |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Slices can be packed with basic elements from multiple hierarchies.
+  Therefore, a slice will be counted in every hierarchical module
+  that each of its packed basic elements belong to.
+** For each column, there are two numbers reported <A>/<B>.
+   <A> is the number of elements that belong to that specific hierarchical module.
+   <B> is the total number of elements from that hierarchical module and any lower level
+   hierarchical modules below.
+*** The LUTRAM column counts all LUTs used as memory including RAM, ROM, and shift registers.
