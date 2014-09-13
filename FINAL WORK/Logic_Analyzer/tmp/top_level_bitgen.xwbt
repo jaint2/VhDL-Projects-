@@ -1,0 +1,8 @@
+INTSTYLE=silent
+INFILE=/users/j/jaint2/Downloads/Logic_Analyzer/top_level.ncd
+OUTFILE=/users/j/jaint2/Downloads/Logic_Analyzer/top_level.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=/users/j/jaint2/Downloads/Logic_Analyzer
+LICENSE=ISE
+USER_INFO=174459675_174119114_210573113_440

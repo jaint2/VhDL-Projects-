@@ -1,0 +1,2207 @@
+Release 14.1 - xst P.15xf (lin)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Parameter xsthdpdir set to tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "tmp/top_level.prj"
+
+---- Target Parameters
+Output File Name                   : "top_level"
+Target Device                      : xc6slx16-csg324-3
+
+---- Source Options
+Top Module Name                    : top_level
+
+---- General Options
+Library Search Order               : tmp/top_level.lso
+Optimization Goal                  : speed
+Optimization Effort                : 1
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/users/j/jaint2/Downloads/Logic_Analyzer/std_logic_textio.vhd" into library work
+Parsing package <STD_LOGIC_TEXTIO>.
+Parsing package body <STD_LOGIC_TEXTIO>.
+Parsing VHDL file "/users/j/jaint2/Downloads/Logic_Analyzer/util.vhd" into library work
+Parsing package <util>.
+Parsing package body <util>.
+Parsing VHDL file "/users/j/jaint2/Downloads/Logic_Analyzer/bcd_counter.vhd" into library work
+Parsing entity <bcd_counter>.
+Parsing architecture <rtl> of entity <bcd_counter>.
+Parsing VHDL file "/users/j/jaint2/Downloads/Logic_Analyzer/fifo.vhd" into library work
+Parsing entity <fifo>.
+Parsing architecture <rtl> of entity <fifo>.
+Parsing VHDL file "/users/j/jaint2/Downloads/Logic_Analyzer/trigger.vhd" into library work
+Parsing entity <trigger>.
+Parsing architecture <rtl> of entity <trigger>.
+Parsing VHDL file "/users/j/jaint2/Downloads/Logic_Analyzer/transmitter.vhd" into library work
+Parsing entity <transmitter>.
+Parsing architecture <rtl> of entity <transmitter>.
+Parsing VHDL file "/users/j/jaint2/Downloads/Logic_Analyzer/serial_port.vhd" into library work
+Parsing entity <serial_port>.
+Parsing architecture <rtl> of entity <serial_port>.
+Parsing VHDL file "/users/j/jaint2/Downloads/Logic_Analyzer/top_level.vhd" into library work
+Parsing entity <top_level>.
+Parsing architecture <behav> of entity <top_level>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <top_level> (architecture <behav>) from library <work>.
+
+Elaborating entity <bcd_counter> (architecture <rtl>) with generics from library <work>.
+
+Elaborating entity <trigger> (architecture <rtl>) with generics from library <work>.
+INFO:HDLCompiler:679 - "/users/j/jaint2/Downloads/Logic_Analyzer/trigger.vhd" Line 119. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "/users/j/jaint2/Downloads/Logic_Analyzer/trigger.vhd" Line 119. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "/users/j/jaint2/Downloads/Logic_Analyzer/trigger.vhd" Line 119. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "/users/j/jaint2/Downloads/Logic_Analyzer/trigger.vhd" Line 119. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "/users/j/jaint2/Downloads/Logic_Analyzer/trigger.vhd" Line 119. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "/users/j/jaint2/Downloads/Logic_Analyzer/trigger.vhd" Line 119. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "/users/j/jaint2/Downloads/Logic_Analyzer/trigger.vhd" Line 119. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "/users/j/jaint2/Downloads/Logic_Analyzer/trigger.vhd" Line 119. Case statement is complete. others clause is never selected
+
+Elaborating entity <fifo> (architecture <rtl>) with generics from library <work>.
+
+Elaborating entity <transmitter> (architecture <rtl>) with generics from library <work>.
+INFO:HDLCompiler:679 - "/users/j/jaint2/Downloads/Logic_Analyzer/transmitter.vhd" Line 134. Case statement is complete. others clause is never selected
+
+Elaborating entity <serial_port> (architecture <rtl>) with generics from library <work>.
+INFO:HDLCompiler:679 - "/users/j/jaint2/Downloads/Logic_Analyzer/serial_port.vhd" Line 128. Case statement is complete. others clause is never selected
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <top_level>.
+    Related source file is "/users/j/jaint2/Downloads/Logic_Analyzer/top_level.vhd".
+WARNING:Xst:647 - Input <sw<7:6>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <btnr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <rx> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <msf> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <dcf> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "/users/j/jaint2/Downloads/Logic_Analyzer/top_level.vhd" line 68: Output port <c> of the instance <uptime_unit> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/users/j/jaint2/Downloads/Logic_Analyzer/top_level.vhd" line 83: Output port <eo> of the instance <trigger_uut> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/users/j/jaint2/Downloads/Logic_Analyzer/top_level.vhd" line 83: Output port <ro> of the instance <trigger_uut> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/users/j/jaint2/Downloads/Logic_Analyzer/top_level.vhd" line 83: Output port <fo> of the instance <trigger_uut> is unconnected or connected to loadless signal.
+Always blocking tristate driving signal <data_key> is removed.
+Always blocking tristate driving signal <clk_key> is removed.
+    Summary:
+	inferred   6 Multiplexer(s).
+Unit <top_level> synthesized.
+
+Synthesizing Unit <bcd_counter>.
+    Related source file is "/users/j/jaint2/Downloads/Logic_Analyzer/bcd_counter.vhd".
+        leading_zero = false
+        digits = 13
+    Found 1-bit register for signal <cnt_reset<1>>.
+    Found 1-bit register for signal <cnt_reset<2>>.
+    Found 1-bit register for signal <cnt_reset<3>>.
+    Found 1-bit register for signal <cnt_reset<4>>.
+    Found 1-bit register for signal <cnt_reset<5>>.
+    Found 1-bit register for signal <cnt_reset<6>>.
+    Found 1-bit register for signal <cnt_reset<7>>.
+    Found 1-bit register for signal <cnt_reset<8>>.
+    Found 1-bit register for signal <cnt_reset<9>>.
+    Found 1-bit register for signal <cnt_reset<10>>.
+    Found 1-bit register for signal <cnt_reset<11>>.
+    Found 1-bit register for signal <cnt_reset<12>>.
+    Found 1-bit register for signal <cnt_reset<0>>.
+    Found 4-bit register for signal <cnt_curr<1>>.
+    Found 4-bit register for signal <cnt_curr<2>>.
+    Found 4-bit register for signal <cnt_curr<3>>.
+    Found 4-bit register for signal <cnt_curr<4>>.
+    Found 4-bit register for signal <cnt_curr<5>>.
+    Found 4-bit register for signal <cnt_curr<6>>.
+    Found 4-bit register for signal <cnt_curr<7>>.
+    Found 4-bit register for signal <cnt_curr<8>>.
+    Found 4-bit register for signal <cnt_curr<9>>.
+    Found 4-bit register for signal <cnt_curr<10>>.
+    Found 4-bit register for signal <cnt_curr<11>>.
+    Found 4-bit register for signal <cnt_curr<12>>.
+    Found 4-bit register for signal <cnt_curr<0>>.
+    Found 4-bit adder for signal <cnt_curr[0][3]_GND_10_o_add_3_OUT> created at line 1241.
+    Found 4-bit adder for signal <cnt_curr[1][3]_GND_10_o_add_10_OUT> created at line 1241.
+    Found 4-bit adder for signal <cnt_curr[2][3]_GND_10_o_add_17_OUT> created at line 1241.
+    Found 4-bit adder for signal <cnt_curr[3][3]_GND_10_o_add_24_OUT> created at line 1241.
+    Found 4-bit adder for signal <cnt_curr[4][3]_GND_10_o_add_31_OUT> created at line 1241.
+    Found 4-bit adder for signal <cnt_curr[5][3]_GND_10_o_add_38_OUT> created at line 1241.
+    Found 4-bit adder for signal <cnt_curr[6][3]_GND_10_o_add_45_OUT> created at line 1241.
+    Found 4-bit adder for signal <cnt_curr[7][3]_GND_10_o_add_52_OUT> created at line 1241.
+    Found 4-bit adder for signal <cnt_curr[8][3]_GND_10_o_add_59_OUT> created at line 1241.
+    Found 4-bit adder for signal <cnt_curr[9][3]_GND_10_o_add_66_OUT> created at line 1241.
+    Found 4-bit adder for signal <cnt_curr[10][3]_GND_10_o_add_73_OUT> created at line 1241.
+    Found 4-bit adder for signal <cnt_curr[11][3]_GND_10_o_add_80_OUT> created at line 1241.
+    Found 4-bit adder for signal <cnt_curr[12][3]_GND_10_o_add_87_OUT> created at line 1241.
+    Found 4-bit comparator greater for signal <cnt_curr[0][3]_PWR_8_o_LessThan_3_o> created at line 59
+    Found 4-bit comparator greater for signal <cnt_curr[1][3]_PWR_8_o_LessThan_10_o> created at line 59
+    Found 4-bit comparator greater for signal <cnt_curr[2][3]_PWR_8_o_LessThan_17_o> created at line 59
+    Found 4-bit comparator greater for signal <cnt_curr[3][3]_PWR_8_o_LessThan_24_o> created at line 59
+    Found 4-bit comparator greater for signal <cnt_curr[4][3]_PWR_8_o_LessThan_31_o> created at line 59
+    Found 4-bit comparator greater for signal <cnt_curr[5][3]_PWR_8_o_LessThan_38_o> created at line 59
+    Found 4-bit comparator greater for signal <cnt_curr[6][3]_PWR_8_o_LessThan_45_o> created at line 59
+    Found 4-bit comparator greater for signal <cnt_curr[7][3]_PWR_8_o_LessThan_52_o> created at line 59
+    Found 4-bit comparator greater for signal <cnt_curr[8][3]_PWR_8_o_LessThan_59_o> created at line 59
+    Found 4-bit comparator greater for signal <cnt_curr[9][3]_PWR_8_o_LessThan_66_o> created at line 59
+    Found 4-bit comparator greater for signal <cnt_curr[10][3]_PWR_8_o_LessThan_73_o> created at line 59
+    Found 4-bit comparator greater for signal <cnt_curr[11][3]_PWR_8_o_LessThan_80_o> created at line 59
+    Found 4-bit comparator greater for signal <cnt_curr[12][3]_PWR_8_o_LessThan_87_o> created at line 59
+    Summary:
+	inferred  13 Adder/Subtractor(s).
+	inferred  65 D-type flip-flop(s).
+	inferred  13 Comparator(s).
+	inferred  26 Multiplexer(s).
+Unit <bcd_counter> synthesized.
+
+Synthesizing Unit <trigger>.
+    Related source file is "/users/j/jaint2/Downloads/Logic_Analyzer/trigger.vhd".
+        clk_freq = 100000000
+        debounce = 0
+        signals = 8
+    Found 2-bit register for signal <state<0>>.
+    Found 2-bit register for signal <state<1>>.
+    Found 2-bit register for signal <state<2>>.
+    Found 2-bit register for signal <state<3>>.
+    Found 2-bit register for signal <state<4>>.
+    Found 2-bit register for signal <state<5>>.
+    Found 2-bit register for signal <state<6>>.
+    Found 2-bit register for signal <state<7>>.
+    Found 1-bit register for signal <di_sampled<0>>.
+    Found 1-bit register for signal <di_sampled<1>>.
+    Found 1-bit register for signal <di_sampled<2>>.
+    Found 1-bit register for signal <di_sampled<3>>.
+    Found 1-bit register for signal <di_sampled<4>>.
+    Found 1-bit register for signal <di_sampled<5>>.
+    Found 1-bit register for signal <di_sampled<6>>.
+    Found 1-bit register for signal <di_sampled<7>>.
+    Found finite state machine <FSM_0> for signal <state_0>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | st_low                                         |
+    | Power Up State     | st_low                                         |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_1> for signal <state_1>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | st_low                                         |
+    | Power Up State     | st_low                                         |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_2> for signal <state_2>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | st_low                                         |
+    | Power Up State     | st_low                                         |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_3> for signal <state_3>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | st_low                                         |
+    | Power Up State     | st_low                                         |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_4> for signal <state_4>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | st_low                                         |
+    | Power Up State     | st_low                                         |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_5> for signal <state_5>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | st_low                                         |
+    | Power Up State     | st_low                                         |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_6> for signal <state_6>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | st_low                                         |
+    | Power Up State     | st_low                                         |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_7> for signal <state_7>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | st_low                                         |
+    | Power Up State     | st_low                                         |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   8 D-type flip-flop(s).
+	inferred   8 Finite State Machine(s).
+Unit <trigger> synthesized.
+
+Synthesizing Unit <fifo>.
+    Related source file is "/users/j/jaint2/Downloads/Logic_Analyzer/fifo.vhd".
+        ts_digits = 13
+        signals = 8
+        size = 64
+    Found 4-bit register for signal <tbuf<0><11>>.
+    Found 4-bit register for signal <tbuf<0><10>>.
+    Found 4-bit register for signal <tbuf<0><9>>.
+    Found 4-bit register for signal <tbuf<0><8>>.
+    Found 4-bit register for signal <tbuf<0><7>>.
+    Found 4-bit register for signal <tbuf<0><6>>.
+    Found 4-bit register for signal <tbuf<0><5>>.
+    Found 4-bit register for signal <tbuf<0><4>>.
+    Found 4-bit register for signal <tbuf<0><3>>.
+    Found 4-bit register for signal <tbuf<0><2>>.
+    Found 4-bit register for signal <tbuf<0><1>>.
+    Found 4-bit register for signal <tbuf<0><0>>.
+    Found 4-bit register for signal <tbuf<1><12>>.
+    Found 4-bit register for signal <tbuf<1><11>>.
+    Found 4-bit register for signal <tbuf<1><10>>.
+    Found 4-bit register for signal <tbuf<1><9>>.
+    Found 4-bit register for signal <tbuf<1><8>>.
+    Found 4-bit register for signal <tbuf<1><7>>.
+    Found 4-bit register for signal <tbuf<1><6>>.
+    Found 4-bit register for signal <tbuf<1><5>>.
+    Found 4-bit register for signal <tbuf<1><4>>.
+    Found 4-bit register for signal <tbuf<1><3>>.
+    Found 4-bit register for signal <tbuf<1><2>>.
+    Found 4-bit register for signal <tbuf<1><1>>.
+    Found 4-bit register for signal <tbuf<1><0>>.
+    Found 4-bit register for signal <tbuf<2><12>>.
+    Found 4-bit register for signal <tbuf<2><11>>.
+    Found 4-bit register for signal <tbuf<2><10>>.
+    Found 4-bit register for signal <tbuf<2><9>>.
+    Found 4-bit register for signal <tbuf<2><8>>.
+    Found 4-bit register for signal <tbuf<2><7>>.
+    Found 4-bit register for signal <tbuf<2><6>>.
+    Found 4-bit register for signal <tbuf<2><5>>.
+    Found 4-bit register for signal <tbuf<2><4>>.
+    Found 4-bit register for signal <tbuf<2><3>>.
+    Found 4-bit register for signal <tbuf<2><2>>.
+    Found 4-bit register for signal <tbuf<2><1>>.
+    Found 4-bit register for signal <tbuf<2><0>>.
+    Found 4-bit register for signal <tbuf<3><12>>.
+    Found 4-bit register for signal <tbuf<3><11>>.
+    Found 4-bit register for signal <tbuf<3><10>>.
+    Found 4-bit register for signal <tbuf<3><9>>.
+    Found 4-bit register for signal <tbuf<3><8>>.
+    Found 4-bit register for signal <tbuf<3><7>>.
+    Found 4-bit register for signal <tbuf<3><6>>.
+    Found 4-bit register for signal <tbuf<3><5>>.
+    Found 4-bit register for signal <tbuf<3><4>>.
+    Found 4-bit register for signal <tbuf<3><3>>.
+    Found 4-bit register for signal <tbuf<3><2>>.
+    Found 4-bit register for signal <tbuf<3><1>>.
+    Found 4-bit register for signal <tbuf<3><0>>.
+    Found 4-bit register for signal <tbuf<4><12>>.
+    Found 4-bit register for signal <tbuf<4><11>>.
+    Found 4-bit register for signal <tbuf<4><10>>.
+    Found 4-bit register for signal <tbuf<4><9>>.
+    Found 4-bit register for signal <tbuf<4><8>>.
+    Found 4-bit register for signal <tbuf<4><7>>.
+    Found 4-bit register for signal <tbuf<4><6>>.
+    Found 4-bit register for signal <tbuf<4><5>>.
+    Found 4-bit register for signal <tbuf<4><4>>.
+    Found 4-bit register for signal <tbuf<4><3>>.
+    Found 4-bit register for signal <tbuf<4><2>>.
+    Found 4-bit register for signal <tbuf<4><1>>.
+    Found 4-bit register for signal <tbuf<4><0>>.
+    Found 4-bit register for signal <tbuf<5><12>>.
+    Found 4-bit register for signal <tbuf<5><11>>.
+    Found 4-bit register for signal <tbuf<5><10>>.
+    Found 4-bit register for signal <tbuf<5><9>>.
+    Found 4-bit register for signal <tbuf<5><8>>.
+    Found 4-bit register for signal <tbuf<5><7>>.
+    Found 4-bit register for signal <tbuf<5><6>>.
+    Found 4-bit register for signal <tbuf<5><5>>.
+    Found 4-bit register for signal <tbuf<5><4>>.
+    Found 4-bit register for signal <tbuf<5><3>>.
+    Found 4-bit register for signal <tbuf<5><2>>.
+    Found 4-bit register for signal <tbuf<5><1>>.
+    Found 4-bit register for signal <tbuf<5><0>>.
+    Found 4-bit register for signal <tbuf<6><12>>.
+    Found 4-bit register for signal <tbuf<6><11>>.
+    Found 4-bit register for signal <tbuf<6><10>>.
+    Found 4-bit register for signal <tbuf<6><9>>.
+    Found 4-bit register for signal <tbuf<6><8>>.
+    Found 4-bit register for signal <tbuf<6><7>>.
+    Found 4-bit register for signal <tbuf<6><6>>.
+    Found 4-bit register for signal <tbuf<6><5>>.
+    Found 4-bit register for signal <tbuf<6><4>>.
+    Found 4-bit register for signal <tbuf<6><3>>.
+    Found 4-bit register for signal <tbuf<6><2>>.
+    Found 4-bit register for signal <tbuf<6><1>>.
+    Found 4-bit register for signal <tbuf<6><0>>.
+    Found 4-bit register for signal <tbuf<7><12>>.
+    Found 4-bit register for signal <tbuf<7><11>>.
+    Found 4-bit register for signal <tbuf<7><10>>.
+    Found 4-bit register for signal <tbuf<7><9>>.
+    Found 4-bit register for signal <tbuf<7><8>>.
+    Found 4-bit register for signal <tbuf<7><7>>.
+    Found 4-bit register for signal <tbuf<7><6>>.
+    Found 4-bit register for signal <tbuf<7><5>>.
+    Found 4-bit register for signal <tbuf<7><4>>.
+    Found 4-bit register for signal <tbuf<7><3>>.
+    Found 4-bit register for signal <tbuf<7><2>>.
+    Found 4-bit register for signal <tbuf<7><1>>.
+    Found 4-bit register for signal <tbuf<7><0>>.
+    Found 4-bit register for signal <tbuf<8><12>>.
+    Found 4-bit register for signal <tbuf<8><11>>.
+    Found 4-bit register for signal <tbuf<8><10>>.
+    Found 4-bit register for signal <tbuf<8><9>>.
+    Found 4-bit register for signal <tbuf<8><8>>.
+    Found 4-bit register for signal <tbuf<8><7>>.
+    Found 4-bit register for signal <tbuf<8><6>>.
+    Found 4-bit register for signal <tbuf<8><5>>.
+    Found 4-bit register for signal <tbuf<8><4>>.
+    Found 4-bit register for signal <tbuf<8><3>>.
+    Found 4-bit register for signal <tbuf<8><2>>.
+    Found 4-bit register for signal <tbuf<8><1>>.
+    Found 4-bit register for signal <tbuf<8><0>>.
+    Found 4-bit register for signal <tbuf<9><12>>.
+    Found 4-bit register for signal <tbuf<9><11>>.
+    Found 4-bit register for signal <tbuf<9><10>>.
+    Found 4-bit register for signal <tbuf<9><9>>.
+    Found 4-bit register for signal <tbuf<9><8>>.
+    Found 4-bit register for signal <tbuf<9><7>>.
+    Found 4-bit register for signal <tbuf<9><6>>.
+    Found 4-bit register for signal <tbuf<9><5>>.
+    Found 4-bit register for signal <tbuf<9><4>>.
+    Found 4-bit register for signal <tbuf<9><3>>.
+    Found 4-bit register for signal <tbuf<9><2>>.
+    Found 4-bit register for signal <tbuf<9><1>>.
+    Found 4-bit register for signal <tbuf<9><0>>.
+    Found 4-bit register for signal <tbuf<10><12>>.
+    Found 4-bit register for signal <tbuf<10><11>>.
+    Found 4-bit register for signal <tbuf<10><10>>.
+    Found 4-bit register for signal <tbuf<10><9>>.
+    Found 4-bit register for signal <tbuf<10><8>>.
+    Found 4-bit register for signal <tbuf<10><7>>.
+    Found 4-bit register for signal <tbuf<10><6>>.
+    Found 4-bit register for signal <tbuf<10><5>>.
+    Found 4-bit register for signal <tbuf<10><4>>.
+    Found 4-bit register for signal <tbuf<10><3>>.
+    Found 4-bit register for signal <tbuf<10><2>>.
+    Found 4-bit register for signal <tbuf<10><1>>.
+    Found 4-bit register for signal <tbuf<10><0>>.
+    Found 4-bit register for signal <tbuf<11><12>>.
+    Found 4-bit register for signal <tbuf<11><11>>.
+    Found 4-bit register for signal <tbuf<11><10>>.
+    Found 4-bit register for signal <tbuf<11><9>>.
+    Found 4-bit register for signal <tbuf<11><8>>.
+    Found 4-bit register for signal <tbuf<11><7>>.
+    Found 4-bit register for signal <tbuf<11><6>>.
+    Found 4-bit register for signal <tbuf<11><5>>.
+    Found 4-bit register for signal <tbuf<11><4>>.
+    Found 4-bit register for signal <tbuf<11><3>>.
+    Found 4-bit register for signal <tbuf<11><2>>.
+    Found 4-bit register for signal <tbuf<11><1>>.
+    Found 4-bit register for signal <tbuf<11><0>>.
+    Found 4-bit register for signal <tbuf<12><12>>.
+    Found 4-bit register for signal <tbuf<12><11>>.
+    Found 4-bit register for signal <tbuf<12><10>>.
+    Found 4-bit register for signal <tbuf<12><9>>.
+    Found 4-bit register for signal <tbuf<12><8>>.
+    Found 4-bit register for signal <tbuf<12><7>>.
+    Found 4-bit register for signal <tbuf<12><6>>.
+    Found 4-bit register for signal <tbuf<12><5>>.
+    Found 4-bit register for signal <tbuf<12><4>>.
+    Found 4-bit register for signal <tbuf<12><3>>.
+    Found 4-bit register for signal <tbuf<12><2>>.
+    Found 4-bit register for signal <tbuf<12><1>>.
+    Found 4-bit register for signal <tbuf<12><0>>.
+    Found 4-bit register for signal <tbuf<13><12>>.
+    Found 4-bit register for signal <tbuf<13><11>>.
+    Found 4-bit register for signal <tbuf<13><10>>.
+    Found 4-bit register for signal <tbuf<13><9>>.
+    Found 4-bit register for signal <tbuf<13><8>>.
+    Found 4-bit register for signal <tbuf<13><7>>.
+    Found 4-bit register for signal <tbuf<13><6>>.
+    Found 4-bit register for signal <tbuf<13><5>>.
+    Found 4-bit register for signal <tbuf<13><4>>.
+    Found 4-bit register for signal <tbuf<13><3>>.
+    Found 4-bit register for signal <tbuf<13><2>>.
+    Found 4-bit register for signal <tbuf<13><1>>.
+    Found 4-bit register for signal <tbuf<13><0>>.
+    Found 4-bit register for signal <tbuf<14><12>>.
+    Found 4-bit register for signal <tbuf<14><11>>.
+    Found 4-bit register for signal <tbuf<14><10>>.
+    Found 4-bit register for signal <tbuf<14><9>>.
+    Found 4-bit register for signal <tbuf<14><8>>.
+    Found 4-bit register for signal <tbuf<14><7>>.
+    Found 4-bit register for signal <tbuf<14><6>>.
+    Found 4-bit register for signal <tbuf<14><5>>.
+    Found 4-bit register for signal <tbuf<14><4>>.
+    Found 4-bit register for signal <tbuf<14><3>>.
+    Found 4-bit register for signal <tbuf<14><2>>.
+    Found 4-bit register for signal <tbuf<14><1>>.
+    Found 4-bit register for signal <tbuf<14><0>>.
+    Found 4-bit register for signal <tbuf<15><12>>.
+    Found 4-bit register for signal <tbuf<15><11>>.
+    Found 4-bit register for signal <tbuf<15><10>>.
+    Found 4-bit register for signal <tbuf<15><9>>.
+    Found 4-bit register for signal <tbuf<15><8>>.
+    Found 4-bit register for signal <tbuf<15><7>>.
+    Found 4-bit register for signal <tbuf<15><6>>.
+    Found 4-bit register for signal <tbuf<15><5>>.
+    Found 4-bit register for signal <tbuf<15><4>>.
+    Found 4-bit register for signal <tbuf<15><3>>.
+    Found 4-bit register for signal <tbuf<15><2>>.
+    Found 4-bit register for signal <tbuf<15><1>>.
+    Found 4-bit register for signal <tbuf<15><0>>.
+    Found 4-bit register for signal <tbuf<16><12>>.
+    Found 4-bit register for signal <tbuf<16><11>>.
+    Found 4-bit register for signal <tbuf<16><10>>.
+    Found 4-bit register for signal <tbuf<16><9>>.
+    Found 4-bit register for signal <tbuf<16><8>>.
+    Found 4-bit register for signal <tbuf<16><7>>.
+    Found 4-bit register for signal <tbuf<16><6>>.
+    Found 4-bit register for signal <tbuf<16><5>>.
+    Found 4-bit register for signal <tbuf<16><4>>.
+    Found 4-bit register for signal <tbuf<16><3>>.
+    Found 4-bit register for signal <tbuf<16><2>>.
+    Found 4-bit register for signal <tbuf<16><1>>.
+    Found 4-bit register for signal <tbuf<16><0>>.
+    Found 4-bit register for signal <tbuf<17><12>>.
+    Found 4-bit register for signal <tbuf<17><11>>.
+    Found 4-bit register for signal <tbuf<17><10>>.
+    Found 4-bit register for signal <tbuf<17><9>>.
+    Found 4-bit register for signal <tbuf<17><8>>.
+    Found 4-bit register for signal <tbuf<17><7>>.
+    Found 4-bit register for signal <tbuf<17><6>>.
+    Found 4-bit register for signal <tbuf<17><5>>.
+    Found 4-bit register for signal <tbuf<17><4>>.
+    Found 4-bit register for signal <tbuf<17><3>>.
+    Found 4-bit register for signal <tbuf<17><2>>.
+    Found 4-bit register for signal <tbuf<17><1>>.
+    Found 4-bit register for signal <tbuf<17><0>>.
+    Found 4-bit register for signal <tbuf<18><12>>.
+    Found 4-bit register for signal <tbuf<18><11>>.
+    Found 4-bit register for signal <tbuf<18><10>>.
+    Found 4-bit register for signal <tbuf<18><9>>.
+    Found 4-bit register for signal <tbuf<18><8>>.
+    Found 4-bit register for signal <tbuf<18><7>>.
+    Found 4-bit register for signal <tbuf<18><6>>.
+    Found 4-bit register for signal <tbuf<18><5>>.
+    Found 4-bit register for signal <tbuf<18><4>>.
+    Found 4-bit register for signal <tbuf<18><3>>.
+    Found 4-bit register for signal <tbuf<18><2>>.
+    Found 4-bit register for signal <tbuf<18><1>>.
+    Found 4-bit register for signal <tbuf<18><0>>.
+    Found 4-bit register for signal <tbuf<19><12>>.
+    Found 4-bit register for signal <tbuf<19><11>>.
+    Found 4-bit register for signal <tbuf<19><10>>.
+    Found 4-bit register for signal <tbuf<19><9>>.
+    Found 4-bit register for signal <tbuf<19><8>>.
+    Found 4-bit register for signal <tbuf<19><7>>.
+    Found 4-bit register for signal <tbuf<19><6>>.
+    Found 4-bit register for signal <tbuf<19><5>>.
+    Found 4-bit register for signal <tbuf<19><4>>.
+    Found 4-bit register for signal <tbuf<19><3>>.
+    Found 4-bit register for signal <tbuf<19><2>>.
+    Found 4-bit register for signal <tbuf<19><1>>.
+    Found 4-bit register for signal <tbuf<19><0>>.
+    Found 4-bit register for signal <tbuf<20><12>>.
+    Found 4-bit register for signal <tbuf<20><11>>.
+    Found 4-bit register for signal <tbuf<20><10>>.
+    Found 4-bit register for signal <tbuf<20><9>>.
+    Found 4-bit register for signal <tbuf<20><8>>.
+    Found 4-bit register for signal <tbuf<20><7>>.
+    Found 4-bit register for signal <tbuf<20><6>>.
+    Found 4-bit register for signal <tbuf<20><5>>.
+    Found 4-bit register for signal <tbuf<20><4>>.
+    Found 4-bit register for signal <tbuf<20><3>>.
+    Found 4-bit register for signal <tbuf<20><2>>.
+    Found 4-bit register for signal <tbuf<20><1>>.
+    Found 4-bit register for signal <tbuf<20><0>>.
+    Found 4-bit register for signal <tbuf<21><12>>.
+    Found 4-bit register for signal <tbuf<21><11>>.
+    Found 4-bit register for signal <tbuf<21><10>>.
+    Found 4-bit register for signal <tbuf<21><9>>.
+    Found 4-bit register for signal <tbuf<21><8>>.
+    Found 4-bit register for signal <tbuf<21><7>>.
+    Found 4-bit register for signal <tbuf<21><6>>.
+    Found 4-bit register for signal <tbuf<21><5>>.
+    Found 4-bit register for signal <tbuf<21><4>>.
+    Found 4-bit register for signal <tbuf<21><3>>.
+    Found 4-bit register for signal <tbuf<21><2>>.
+    Found 4-bit register for signal <tbuf<21><1>>.
+    Found 4-bit register for signal <tbuf<21><0>>.
+    Found 4-bit register for signal <tbuf<22><12>>.
+    Found 4-bit register for signal <tbuf<22><11>>.
+    Found 4-bit register for signal <tbuf<22><10>>.
+    Found 4-bit register for signal <tbuf<22><9>>.
+    Found 4-bit register for signal <tbuf<22><8>>.
+    Found 4-bit register for signal <tbuf<22><7>>.
+    Found 4-bit register for signal <tbuf<22><6>>.
+    Found 4-bit register for signal <tbuf<22><5>>.
+    Found 4-bit register for signal <tbuf<22><4>>.
+    Found 4-bit register for signal <tbuf<22><3>>.
+    Found 4-bit register for signal <tbuf<22><2>>.
+    Found 4-bit register for signal <tbuf<22><1>>.
+    Found 4-bit register for signal <tbuf<22><0>>.
+    Found 4-bit register for signal <tbuf<23><12>>.
+    Found 4-bit register for signal <tbuf<23><11>>.
+    Found 4-bit register for signal <tbuf<23><10>>.
+    Found 4-bit register for signal <tbuf<23><9>>.
+    Found 4-bit register for signal <tbuf<23><8>>.
+    Found 4-bit register for signal <tbuf<23><7>>.
+    Found 4-bit register for signal <tbuf<23><6>>.
+    Found 4-bit register for signal <tbuf<23><5>>.
+    Found 4-bit register for signal <tbuf<23><4>>.
+    Found 4-bit register for signal <tbuf<23><3>>.
+    Found 4-bit register for signal <tbuf<23><2>>.
+    Found 4-bit register for signal <tbuf<23><1>>.
+    Found 4-bit register for signal <tbuf<23><0>>.
+    Found 4-bit register for signal <tbuf<24><12>>.
+    Found 4-bit register for signal <tbuf<24><11>>.
+    Found 4-bit register for signal <tbuf<24><10>>.
+    Found 4-bit register for signal <tbuf<24><9>>.
+    Found 4-bit register for signal <tbuf<24><8>>.
+    Found 4-bit register for signal <tbuf<24><7>>.
+    Found 4-bit register for signal <tbuf<24><6>>.
+    Found 4-bit register for signal <tbuf<24><5>>.
+    Found 4-bit register for signal <tbuf<24><4>>.
+    Found 4-bit register for signal <tbuf<24><3>>.
+    Found 4-bit register for signal <tbuf<24><2>>.
+    Found 4-bit register for signal <tbuf<24><1>>.
+    Found 4-bit register for signal <tbuf<24><0>>.
+    Found 4-bit register for signal <tbuf<25><12>>.
+    Found 4-bit register for signal <tbuf<25><11>>.
+    Found 4-bit register for signal <tbuf<25><10>>.
+    Found 4-bit register for signal <tbuf<25><9>>.
+    Found 4-bit register for signal <tbuf<25><8>>.
+    Found 4-bit register for signal <tbuf<25><7>>.
+    Found 4-bit register for signal <tbuf<25><6>>.
+    Found 4-bit register for signal <tbuf<25><5>>.
+    Found 4-bit register for signal <tbuf<25><4>>.
+    Found 4-bit register for signal <tbuf<25><3>>.
+    Found 4-bit register for signal <tbuf<25><2>>.
+    Found 4-bit register for signal <tbuf<25><1>>.
+    Found 4-bit register for signal <tbuf<25><0>>.
+    Found 4-bit register for signal <tbuf<26><12>>.
+    Found 4-bit register for signal <tbuf<26><11>>.
+    Found 4-bit register for signal <tbuf<26><10>>.
+    Found 4-bit register for signal <tbuf<26><9>>.
+    Found 4-bit register for signal <tbuf<26><8>>.
+    Found 4-bit register for signal <tbuf<26><7>>.
+    Found 4-bit register for signal <tbuf<26><6>>.
+    Found 4-bit register for signal <tbuf<26><5>>.
+    Found 4-bit register for signal <tbuf<26><4>>.
+    Found 4-bit register for signal <tbuf<26><3>>.
+    Found 4-bit register for signal <tbuf<26><2>>.
+    Found 4-bit register for signal <tbuf<26><1>>.
+    Found 4-bit register for signal <tbuf<26><0>>.
+    Found 4-bit register for signal <tbuf<27><12>>.
+    Found 4-bit register for signal <tbuf<27><11>>.
+    Found 4-bit register for signal <tbuf<27><10>>.
+    Found 4-bit register for signal <tbuf<27><9>>.
+    Found 4-bit register for signal <tbuf<27><8>>.
+    Found 4-bit register for signal <tbuf<27><7>>.
+    Found 4-bit register for signal <tbuf<27><6>>.
+    Found 4-bit register for signal <tbuf<27><5>>.
+    Found 4-bit register for signal <tbuf<27><4>>.
+    Found 4-bit register for signal <tbuf<27><3>>.
+    Found 4-bit register for signal <tbuf<27><2>>.
+    Found 4-bit register for signal <tbuf<27><1>>.
+    Found 4-bit register for signal <tbuf<27><0>>.
+    Found 4-bit register for signal <tbuf<28><12>>.
+    Found 4-bit register for signal <tbuf<28><11>>.
+    Found 4-bit register for signal <tbuf<28><10>>.
+    Found 4-bit register for signal <tbuf<28><9>>.
+    Found 4-bit register for signal <tbuf<28><8>>.
+    Found 4-bit register for signal <tbuf<28><7>>.
+    Found 4-bit register for signal <tbuf<28><6>>.
+    Found 4-bit register for signal <tbuf<28><5>>.
+    Found 4-bit register for signal <tbuf<28><4>>.
+    Found 4-bit register for signal <tbuf<28><3>>.
+    Found 4-bit register for signal <tbuf<28><2>>.
+    Found 4-bit register for signal <tbuf<28><1>>.
+    Found 4-bit register for signal <tbuf<28><0>>.
+    Found 4-bit register for signal <tbuf<29><12>>.
+    Found 4-bit register for signal <tbuf<29><11>>.
+    Found 4-bit register for signal <tbuf<29><10>>.
+    Found 4-bit register for signal <tbuf<29><9>>.
+    Found 4-bit register for signal <tbuf<29><8>>.
+    Found 4-bit register for signal <tbuf<29><7>>.
+    Found 4-bit register for signal <tbuf<29><6>>.
+    Found 4-bit register for signal <tbuf<29><5>>.
+    Found 4-bit register for signal <tbuf<29><4>>.
+    Found 4-bit register for signal <tbuf<29><3>>.
+    Found 4-bit register for signal <tbuf<29><2>>.
+    Found 4-bit register for signal <tbuf<29><1>>.
+    Found 4-bit register for signal <tbuf<29><0>>.
+    Found 4-bit register for signal <tbuf<30><12>>.
+    Found 4-bit register for signal <tbuf<30><11>>.
+    Found 4-bit register for signal <tbuf<30><10>>.
+    Found 4-bit register for signal <tbuf<30><9>>.
+    Found 4-bit register for signal <tbuf<30><8>>.
+    Found 4-bit register for signal <tbuf<30><7>>.
+    Found 4-bit register for signal <tbuf<30><6>>.
+    Found 4-bit register for signal <tbuf<30><5>>.
+    Found 4-bit register for signal <tbuf<30><4>>.
+    Found 4-bit register for signal <tbuf<30><3>>.
+    Found 4-bit register for signal <tbuf<30><2>>.
+    Found 4-bit register for signal <tbuf<30><1>>.
+    Found 4-bit register for signal <tbuf<30><0>>.
+    Found 4-bit register for signal <tbuf<31><12>>.
+    Found 4-bit register for signal <tbuf<31><11>>.
+    Found 4-bit register for signal <tbuf<31><10>>.
+    Found 4-bit register for signal <tbuf<31><9>>.
+    Found 4-bit register for signal <tbuf<31><8>>.
+    Found 4-bit register for signal <tbuf<31><7>>.
+    Found 4-bit register for signal <tbuf<31><6>>.
+    Found 4-bit register for signal <tbuf<31><5>>.
+    Found 4-bit register for signal <tbuf<31><4>>.
+    Found 4-bit register for signal <tbuf<31><3>>.
+    Found 4-bit register for signal <tbuf<31><2>>.
+    Found 4-bit register for signal <tbuf<31><1>>.
+    Found 4-bit register for signal <tbuf<31><0>>.
+    Found 4-bit register for signal <tbuf<32><12>>.
+    Found 4-bit register for signal <tbuf<32><11>>.
+    Found 4-bit register for signal <tbuf<32><10>>.
+    Found 4-bit register for signal <tbuf<32><9>>.
+    Found 4-bit register for signal <tbuf<32><8>>.
+    Found 4-bit register for signal <tbuf<32><7>>.
+    Found 4-bit register for signal <tbuf<32><6>>.
+    Found 4-bit register for signal <tbuf<32><5>>.
+    Found 4-bit register for signal <tbuf<32><4>>.
+    Found 4-bit register for signal <tbuf<32><3>>.
+    Found 4-bit register for signal <tbuf<32><2>>.
+    Found 4-bit register for signal <tbuf<32><1>>.
+    Found 4-bit register for signal <tbuf<32><0>>.
+    Found 4-bit register for signal <tbuf<33><12>>.
+    Found 4-bit register for signal <tbuf<33><11>>.
+    Found 4-bit register for signal <tbuf<33><10>>.
+    Found 4-bit register for signal <tbuf<33><9>>.
+    Found 4-bit register for signal <tbuf<33><8>>.
+    Found 4-bit register for signal <tbuf<33><7>>.
+    Found 4-bit register for signal <tbuf<33><6>>.
+    Found 4-bit register for signal <tbuf<33><5>>.
+    Found 4-bit register for signal <tbuf<33><4>>.
+    Found 4-bit register for signal <tbuf<33><3>>.
+    Found 4-bit register for signal <tbuf<33><2>>.
+    Found 4-bit register for signal <tbuf<33><1>>.
+    Found 4-bit register for signal <tbuf<33><0>>.
+    Found 4-bit register for signal <tbuf<34><12>>.
+    Found 4-bit register for signal <tbuf<34><11>>.
+    Found 4-bit register for signal <tbuf<34><10>>.
+    Found 4-bit register for signal <tbuf<34><9>>.
+    Found 4-bit register for signal <tbuf<34><8>>.
+    Found 4-bit register for signal <tbuf<34><7>>.
+    Found 4-bit register for signal <tbuf<34><6>>.
+    Found 4-bit register for signal <tbuf<34><5>>.
+    Found 4-bit register for signal <tbuf<34><4>>.
+    Found 4-bit register for signal <tbuf<34><3>>.
+    Found 4-bit register for signal <tbuf<34><2>>.
+    Found 4-bit register for signal <tbuf<34><1>>.
+    Found 4-bit register for signal <tbuf<34><0>>.
+    Found 4-bit register for signal <tbuf<35><12>>.
+    Found 4-bit register for signal <tbuf<35><11>>.
+    Found 4-bit register for signal <tbuf<35><10>>.
+    Found 4-bit register for signal <tbuf<35><9>>.
+    Found 4-bit register for signal <tbuf<35><8>>.
+    Found 4-bit register for signal <tbuf<35><7>>.
+    Found 4-bit register for signal <tbuf<35><6>>.
+    Found 4-bit register for signal <tbuf<35><5>>.
+    Found 4-bit register for signal <tbuf<35><4>>.
+    Found 4-bit register for signal <tbuf<35><3>>.
+    Found 4-bit register for signal <tbuf<35><2>>.
+    Found 4-bit register for signal <tbuf<35><1>>.
+    Found 4-bit register for signal <tbuf<35><0>>.
+    Found 4-bit register for signal <tbuf<36><12>>.
+    Found 4-bit register for signal <tbuf<36><11>>.
+    Found 4-bit register for signal <tbuf<36><10>>.
+    Found 4-bit register for signal <tbuf<36><9>>.
+    Found 4-bit register for signal <tbuf<36><8>>.
+    Found 4-bit register for signal <tbuf<36><7>>.
+    Found 4-bit register for signal <tbuf<36><6>>.
+    Found 4-bit register for signal <tbuf<36><5>>.
+    Found 4-bit register for signal <tbuf<36><4>>.
+    Found 4-bit register for signal <tbuf<36><3>>.
+    Found 4-bit register for signal <tbuf<36><2>>.
+    Found 4-bit register for signal <tbuf<36><1>>.
+    Found 4-bit register for signal <tbuf<36><0>>.
+    Found 4-bit register for signal <tbuf<37><12>>.
+    Found 4-bit register for signal <tbuf<37><11>>.
+    Found 4-bit register for signal <tbuf<37><10>>.
+    Found 4-bit register for signal <tbuf<37><9>>.
+    Found 4-bit register for signal <tbuf<37><8>>.
+    Found 4-bit register for signal <tbuf<37><7>>.
+    Found 4-bit register for signal <tbuf<37><6>>.
+    Found 4-bit register for signal <tbuf<37><5>>.
+    Found 4-bit register for signal <tbuf<37><4>>.
+    Found 4-bit register for signal <tbuf<37><3>>.
+    Found 4-bit register for signal <tbuf<37><2>>.
+    Found 4-bit register for signal <tbuf<37><1>>.
+    Found 4-bit register for signal <tbuf<37><0>>.
+    Found 4-bit register for signal <tbuf<38><12>>.
+    Found 4-bit register for signal <tbuf<38><11>>.
+    Found 4-bit register for signal <tbuf<38><10>>.
+    Found 4-bit register for signal <tbuf<38><9>>.
+    Found 4-bit register for signal <tbuf<38><8>>.
+    Found 4-bit register for signal <tbuf<38><7>>.
+    Found 4-bit register for signal <tbuf<38><6>>.
+    Found 4-bit register for signal <tbuf<38><5>>.
+    Found 4-bit register for signal <tbuf<38><4>>.
+    Found 4-bit register for signal <tbuf<38><3>>.
+    Found 4-bit register for signal <tbuf<38><2>>.
+    Found 4-bit register for signal <tbuf<38><1>>.
+    Found 4-bit register for signal <tbuf<38><0>>.
+    Found 4-bit register for signal <tbuf<39><12>>.
+    Found 4-bit register for signal <tbuf<39><11>>.
+    Found 4-bit register for signal <tbuf<39><10>>.
+    Found 4-bit register for signal <tbuf<39><9>>.
+    Found 4-bit register for signal <tbuf<39><8>>.
+    Found 4-bit register for signal <tbuf<39><7>>.
+    Found 4-bit register for signal <tbuf<39><6>>.
+    Found 4-bit register for signal <tbuf<39><5>>.
+    Found 4-bit register for signal <tbuf<39><4>>.
+    Found 4-bit register for signal <tbuf<39><3>>.
+    Found 4-bit register for signal <tbuf<39><2>>.
+    Found 4-bit register for signal <tbuf<39><1>>.
+    Found 4-bit register for signal <tbuf<39><0>>.
+    Found 4-bit register for signal <tbuf<40><12>>.
+    Found 4-bit register for signal <tbuf<40><11>>.
+    Found 4-bit register for signal <tbuf<40><10>>.
+    Found 4-bit register for signal <tbuf<40><9>>.
+    Found 4-bit register for signal <tbuf<40><8>>.
+    Found 4-bit register for signal <tbuf<40><7>>.
+    Found 4-bit register for signal <tbuf<40><6>>.
+    Found 4-bit register for signal <tbuf<40><5>>.
+    Found 4-bit register for signal <tbuf<40><4>>.
+    Found 4-bit register for signal <tbuf<40><3>>.
+    Found 4-bit register for signal <tbuf<40><2>>.
+    Found 4-bit register for signal <tbuf<40><1>>.
+    Found 4-bit register for signal <tbuf<40><0>>.
+    Found 4-bit register for signal <tbuf<41><12>>.
+    Found 4-bit register for signal <tbuf<41><11>>.
+    Found 4-bit register for signal <tbuf<41><10>>.
+    Found 4-bit register for signal <tbuf<41><9>>.
+    Found 4-bit register for signal <tbuf<41><8>>.
+    Found 4-bit register for signal <tbuf<41><7>>.
+    Found 4-bit register for signal <tbuf<41><6>>.
+    Found 4-bit register for signal <tbuf<41><5>>.
+    Found 4-bit register for signal <tbuf<41><4>>.
+    Found 4-bit register for signal <tbuf<41><3>>.
+    Found 4-bit register for signal <tbuf<41><2>>.
+    Found 4-bit register for signal <tbuf<41><1>>.
+    Found 4-bit register for signal <tbuf<41><0>>.
+    Found 4-bit register for signal <tbuf<42><12>>.
+    Found 4-bit register for signal <tbuf<42><11>>.
+    Found 4-bit register for signal <tbuf<42><10>>.
+    Found 4-bit register for signal <tbuf<42><9>>.
+    Found 4-bit register for signal <tbuf<42><8>>.
+    Found 4-bit register for signal <tbuf<42><7>>.
+    Found 4-bit register for signal <tbuf<42><6>>.
+    Found 4-bit register for signal <tbuf<42><5>>.
+    Found 4-bit register for signal <tbuf<42><4>>.
+    Found 4-bit register for signal <tbuf<42><3>>.
+    Found 4-bit register for signal <tbuf<42><2>>.
+    Found 4-bit register for signal <tbuf<42><1>>.
+    Found 4-bit register for signal <tbuf<42><0>>.
+    Found 4-bit register for signal <tbuf<43><12>>.
+    Found 4-bit register for signal <tbuf<43><11>>.
+    Found 4-bit register for signal <tbuf<43><10>>.
+    Found 4-bit register for signal <tbuf<43><9>>.
+    Found 4-bit register for signal <tbuf<43><8>>.
+    Found 4-bit register for signal <tbuf<43><7>>.
+    Found 4-bit register for signal <tbuf<43><6>>.
+    Found 4-bit register for signal <tbuf<43><5>>.
+    Found 4-bit register for signal <tbuf<43><4>>.
+    Found 4-bit register for signal <tbuf<43><3>>.
+    Found 4-bit register for signal <tbuf<43><2>>.
+    Found 4-bit register for signal <tbuf<43><1>>.
+    Found 4-bit register for signal <tbuf<43><0>>.
+    Found 4-bit register for signal <tbuf<44><12>>.
+    Found 4-bit register for signal <tbuf<44><11>>.
+    Found 4-bit register for signal <tbuf<44><10>>.
+    Found 4-bit register for signal <tbuf<44><9>>.
+    Found 4-bit register for signal <tbuf<44><8>>.
+    Found 4-bit register for signal <tbuf<44><7>>.
+    Found 4-bit register for signal <tbuf<44><6>>.
+    Found 4-bit register for signal <tbuf<44><5>>.
+    Found 4-bit register for signal <tbuf<44><4>>.
+    Found 4-bit register for signal <tbuf<44><3>>.
+    Found 4-bit register for signal <tbuf<44><2>>.
+    Found 4-bit register for signal <tbuf<44><1>>.
+    Found 4-bit register for signal <tbuf<44><0>>.
+    Found 4-bit register for signal <tbuf<45><12>>.
+    Found 4-bit register for signal <tbuf<45><11>>.
+    Found 4-bit register for signal <tbuf<45><10>>.
+    Found 4-bit register for signal <tbuf<45><9>>.
+    Found 4-bit register for signal <tbuf<45><8>>.
+    Found 4-bit register for signal <tbuf<45><7>>.
+    Found 4-bit register for signal <tbuf<45><6>>.
+    Found 4-bit register for signal <tbuf<45><5>>.
+    Found 4-bit register for signal <tbuf<45><4>>.
+    Found 4-bit register for signal <tbuf<45><3>>.
+    Found 4-bit register for signal <tbuf<45><2>>.
+    Found 4-bit register for signal <tbuf<45><1>>.
+    Found 4-bit register for signal <tbuf<45><0>>.
+    Found 4-bit register for signal <tbuf<46><12>>.
+    Found 4-bit register for signal <tbuf<46><11>>.
+    Found 4-bit register for signal <tbuf<46><10>>.
+    Found 4-bit register for signal <tbuf<46><9>>.
+    Found 4-bit register for signal <tbuf<46><8>>.
+    Found 4-bit register for signal <tbuf<46><7>>.
+    Found 4-bit register for signal <tbuf<46><6>>.
+    Found 4-bit register for signal <tbuf<46><5>>.
+    Found 4-bit register for signal <tbuf<46><4>>.
+    Found 4-bit register for signal <tbuf<46><3>>.
+    Found 4-bit register for signal <tbuf<46><2>>.
+    Found 4-bit register for signal <tbuf<46><1>>.
+    Found 4-bit register for signal <tbuf<46><0>>.
+    Found 4-bit register for signal <tbuf<47><12>>.
+    Found 4-bit register for signal <tbuf<47><11>>.
+    Found 4-bit register for signal <tbuf<47><10>>.
+    Found 4-bit register for signal <tbuf<47><9>>.
+    Found 4-bit register for signal <tbuf<47><8>>.
+    Found 4-bit register for signal <tbuf<47><7>>.
+    Found 4-bit register for signal <tbuf<47><6>>.
+    Found 4-bit register for signal <tbuf<47><5>>.
+    Found 4-bit register for signal <tbuf<47><4>>.
+    Found 4-bit register for signal <tbuf<47><3>>.
+    Found 4-bit register for signal <tbuf<47><2>>.
+    Found 4-bit register for signal <tbuf<47><1>>.
+    Found 4-bit register for signal <tbuf<47><0>>.
+    Found 4-bit register for signal <tbuf<48><12>>.
+    Found 4-bit register for signal <tbuf<48><11>>.
+    Found 4-bit register for signal <tbuf<48><10>>.
+    Found 4-bit register for signal <tbuf<48><9>>.
+    Found 4-bit register for signal <tbuf<48><8>>.
+    Found 4-bit register for signal <tbuf<48><7>>.
+    Found 4-bit register for signal <tbuf<48><6>>.
+    Found 4-bit register for signal <tbuf<48><5>>.
+    Found 4-bit register for signal <tbuf<48><4>>.
+    Found 4-bit register for signal <tbuf<48><3>>.
+    Found 4-bit register for signal <tbuf<48><2>>.
+    Found 4-bit register for signal <tbuf<48><1>>.
+    Found 4-bit register for signal <tbuf<48><0>>.
+    Found 4-bit register for signal <tbuf<49><12>>.
+    Found 4-bit register for signal <tbuf<49><11>>.
+    Found 4-bit register for signal <tbuf<49><10>>.
+    Found 4-bit register for signal <tbuf<49><9>>.
+    Found 4-bit register for signal <tbuf<49><8>>.
+    Found 4-bit register for signal <tbuf<49><7>>.
+    Found 4-bit register for signal <tbuf<49><6>>.
+    Found 4-bit register for signal <tbuf<49><5>>.
+    Found 4-bit register for signal <tbuf<49><4>>.
+    Found 4-bit register for signal <tbuf<49><3>>.
+    Found 4-bit register for signal <tbuf<49><2>>.
+    Found 4-bit register for signal <tbuf<49><1>>.
+    Found 4-bit register for signal <tbuf<49><0>>.
+    Found 4-bit register for signal <tbuf<50><12>>.
+    Found 4-bit register for signal <tbuf<50><11>>.
+    Found 4-bit register for signal <tbuf<50><10>>.
+    Found 4-bit register for signal <tbuf<50><9>>.
+    Found 4-bit register for signal <tbuf<50><8>>.
+    Found 4-bit register for signal <tbuf<50><7>>.
+    Found 4-bit register for signal <tbuf<50><6>>.
+    Found 4-bit register for signal <tbuf<50><5>>.
+    Found 4-bit register for signal <tbuf<50><4>>.
+    Found 4-bit register for signal <tbuf<50><3>>.
+    Found 4-bit register for signal <tbuf<50><2>>.
+    Found 4-bit register for signal <tbuf<50><1>>.
+    Found 4-bit register for signal <tbuf<50><0>>.
+    Found 4-bit register for signal <tbuf<51><12>>.
+    Found 4-bit register for signal <tbuf<51><11>>.
+    Found 4-bit register for signal <tbuf<51><10>>.
+    Found 4-bit register for signal <tbuf<51><9>>.
+    Found 4-bit register for signal <tbuf<51><8>>.
+    Found 4-bit register for signal <tbuf<51><7>>.
+    Found 4-bit register for signal <tbuf<51><6>>.
+    Found 4-bit register for signal <tbuf<51><5>>.
+    Found 4-bit register for signal <tbuf<51><4>>.
+    Found 4-bit register for signal <tbuf<51><3>>.
+    Found 4-bit register for signal <tbuf<51><2>>.
+    Found 4-bit register for signal <tbuf<51><1>>.
+    Found 4-bit register for signal <tbuf<51><0>>.
+    Found 4-bit register for signal <tbuf<52><12>>.
+    Found 4-bit register for signal <tbuf<52><11>>.
+    Found 4-bit register for signal <tbuf<52><10>>.
+    Found 4-bit register for signal <tbuf<52><9>>.
+    Found 4-bit register for signal <tbuf<52><8>>.
+    Found 4-bit register for signal <tbuf<52><7>>.
+    Found 4-bit register for signal <tbuf<52><6>>.
+    Found 4-bit register for signal <tbuf<52><5>>.
+    Found 4-bit register for signal <tbuf<52><4>>.
+    Found 4-bit register for signal <tbuf<52><3>>.
+    Found 4-bit register for signal <tbuf<52><2>>.
+    Found 4-bit register for signal <tbuf<52><1>>.
+    Found 4-bit register for signal <tbuf<52><0>>.
+    Found 4-bit register for signal <tbuf<53><12>>.
+    Found 4-bit register for signal <tbuf<53><11>>.
+    Found 4-bit register for signal <tbuf<53><10>>.
+    Found 4-bit register for signal <tbuf<53><9>>.
+    Found 4-bit register for signal <tbuf<53><8>>.
+    Found 4-bit register for signal <tbuf<53><7>>.
+    Found 4-bit register for signal <tbuf<53><6>>.
+    Found 4-bit register for signal <tbuf<53><5>>.
+    Found 4-bit register for signal <tbuf<53><4>>.
+    Found 4-bit register for signal <tbuf<53><3>>.
+    Found 4-bit register for signal <tbuf<53><2>>.
+    Found 4-bit register for signal <tbuf<53><1>>.
+    Found 4-bit register for signal <tbuf<53><0>>.
+    Found 4-bit register for signal <tbuf<54><12>>.
+    Found 4-bit register for signal <tbuf<54><11>>.
+    Found 4-bit register for signal <tbuf<54><10>>.
+    Found 4-bit register for signal <tbuf<54><9>>.
+    Found 4-bit register for signal <tbuf<54><8>>.
+    Found 4-bit register for signal <tbuf<54><7>>.
+    Found 4-bit register for signal <tbuf<54><6>>.
+    Found 4-bit register for signal <tbuf<54><5>>.
+    Found 4-bit register for signal <tbuf<54><4>>.
+    Found 4-bit register for signal <tbuf<54><3>>.
+    Found 4-bit register for signal <tbuf<54><2>>.
+    Found 4-bit register for signal <tbuf<54><1>>.
+    Found 4-bit register for signal <tbuf<54><0>>.
+    Found 4-bit register for signal <tbuf<55><12>>.
+    Found 4-bit register for signal <tbuf<55><11>>.
+    Found 4-bit register for signal <tbuf<55><10>>.
+    Found 4-bit register for signal <tbuf<55><9>>.
+    Found 4-bit register for signal <tbuf<55><8>>.
+    Found 4-bit register for signal <tbuf<55><7>>.
+    Found 4-bit register for signal <tbuf<55><6>>.
+    Found 4-bit register for signal <tbuf<55><5>>.
+    Found 4-bit register for signal <tbuf<55><4>>.
+    Found 4-bit register for signal <tbuf<55><3>>.
+    Found 4-bit register for signal <tbuf<55><2>>.
+    Found 4-bit register for signal <tbuf<55><1>>.
+    Found 4-bit register for signal <tbuf<55><0>>.
+    Found 4-bit register for signal <tbuf<56><12>>.
+    Found 4-bit register for signal <tbuf<56><11>>.
+    Found 4-bit register for signal <tbuf<56><10>>.
+    Found 4-bit register for signal <tbuf<56><9>>.
+    Found 4-bit register for signal <tbuf<56><8>>.
+    Found 4-bit register for signal <tbuf<56><7>>.
+    Found 4-bit register for signal <tbuf<56><6>>.
+    Found 4-bit register for signal <tbuf<56><5>>.
+    Found 4-bit register for signal <tbuf<56><4>>.
+    Found 4-bit register for signal <tbuf<56><3>>.
+    Found 4-bit register for signal <tbuf<56><2>>.
+    Found 4-bit register for signal <tbuf<56><1>>.
+    Found 4-bit register for signal <tbuf<56><0>>.
+    Found 4-bit register for signal <tbuf<57><12>>.
+    Found 4-bit register for signal <tbuf<57><11>>.
+    Found 4-bit register for signal <tbuf<57><10>>.
+    Found 4-bit register for signal <tbuf<57><9>>.
+    Found 4-bit register for signal <tbuf<57><8>>.
+    Found 4-bit register for signal <tbuf<57><7>>.
+    Found 4-bit register for signal <tbuf<57><6>>.
+    Found 4-bit register for signal <tbuf<57><5>>.
+    Found 4-bit register for signal <tbuf<57><4>>.
+    Found 4-bit register for signal <tbuf<57><3>>.
+    Found 4-bit register for signal <tbuf<57><2>>.
+    Found 4-bit register for signal <tbuf<57><1>>.
+    Found 4-bit register for signal <tbuf<57><0>>.
+    Found 4-bit register for signal <tbuf<58><12>>.
+    Found 4-bit register for signal <tbuf<58><11>>.
+    Found 4-bit register for signal <tbuf<58><10>>.
+    Found 4-bit register for signal <tbuf<58><9>>.
+    Found 4-bit register for signal <tbuf<58><8>>.
+    Found 4-bit register for signal <tbuf<58><7>>.
+    Found 4-bit register for signal <tbuf<58><6>>.
+    Found 4-bit register for signal <tbuf<58><5>>.
+    Found 4-bit register for signal <tbuf<58><4>>.
+    Found 4-bit register for signal <tbuf<58><3>>.
+    Found 4-bit register for signal <tbuf<58><2>>.
+    Found 4-bit register for signal <tbuf<58><1>>.
+    Found 4-bit register for signal <tbuf<58><0>>.
+    Found 4-bit register for signal <tbuf<59><12>>.
+    Found 4-bit register for signal <tbuf<59><11>>.
+    Found 4-bit register for signal <tbuf<59><10>>.
+    Found 4-bit register for signal <tbuf<59><9>>.
+    Found 4-bit register for signal <tbuf<59><8>>.
+    Found 4-bit register for signal <tbuf<59><7>>.
+    Found 4-bit register for signal <tbuf<59><6>>.
+    Found 4-bit register for signal <tbuf<59><5>>.
+    Found 4-bit register for signal <tbuf<59><4>>.
+    Found 4-bit register for signal <tbuf<59><3>>.
+    Found 4-bit register for signal <tbuf<59><2>>.
+    Found 4-bit register for signal <tbuf<59><1>>.
+    Found 4-bit register for signal <tbuf<59><0>>.
+    Found 4-bit register for signal <tbuf<60><12>>.
+    Found 4-bit register for signal <tbuf<60><11>>.
+    Found 4-bit register for signal <tbuf<60><10>>.
+    Found 4-bit register for signal <tbuf<60><9>>.
+    Found 4-bit register for signal <tbuf<60><8>>.
+    Found 4-bit register for signal <tbuf<60><7>>.
+    Found 4-bit register for signal <tbuf<60><6>>.
+    Found 4-bit register for signal <tbuf<60><5>>.
+    Found 4-bit register for signal <tbuf<60><4>>.
+    Found 4-bit register for signal <tbuf<60><3>>.
+    Found 4-bit register for signal <tbuf<60><2>>.
+    Found 4-bit register for signal <tbuf<60><1>>.
+    Found 4-bit register for signal <tbuf<60><0>>.
+    Found 4-bit register for signal <tbuf<61><12>>.
+    Found 4-bit register for signal <tbuf<61><11>>.
+    Found 4-bit register for signal <tbuf<61><10>>.
+    Found 4-bit register for signal <tbuf<61><9>>.
+    Found 4-bit register for signal <tbuf<61><8>>.
+    Found 4-bit register for signal <tbuf<61><7>>.
+    Found 4-bit register for signal <tbuf<61><6>>.
+    Found 4-bit register for signal <tbuf<61><5>>.
+    Found 4-bit register for signal <tbuf<61><4>>.
+    Found 4-bit register for signal <tbuf<61><3>>.
+    Found 4-bit register for signal <tbuf<61><2>>.
+    Found 4-bit register for signal <tbuf<61><1>>.
+    Found 4-bit register for signal <tbuf<61><0>>.
+    Found 4-bit register for signal <tbuf<62><12>>.
+    Found 4-bit register for signal <tbuf<62><11>>.
+    Found 4-bit register for signal <tbuf<62><10>>.
+    Found 4-bit register for signal <tbuf<62><9>>.
+    Found 4-bit register for signal <tbuf<62><8>>.
+    Found 4-bit register for signal <tbuf<62><7>>.
+    Found 4-bit register for signal <tbuf<62><6>>.
+    Found 4-bit register for signal <tbuf<62><5>>.
+    Found 4-bit register for signal <tbuf<62><4>>.
+    Found 4-bit register for signal <tbuf<62><3>>.
+    Found 4-bit register for signal <tbuf<62><2>>.
+    Found 4-bit register for signal <tbuf<62><1>>.
+    Found 4-bit register for signal <tbuf<62><0>>.
+    Found 4-bit register for signal <tbuf<63><12>>.
+    Found 4-bit register for signal <tbuf<63><11>>.
+    Found 4-bit register for signal <tbuf<63><10>>.
+    Found 4-bit register for signal <tbuf<63><9>>.
+    Found 4-bit register for signal <tbuf<63><8>>.
+    Found 4-bit register for signal <tbuf<63><7>>.
+    Found 4-bit register for signal <tbuf<63><6>>.
+    Found 4-bit register for signal <tbuf<63><5>>.
+    Found 4-bit register for signal <tbuf<63><4>>.
+    Found 4-bit register for signal <tbuf<63><3>>.
+    Found 4-bit register for signal <tbuf<63><2>>.
+    Found 4-bit register for signal <tbuf<63><1>>.
+    Found 4-bit register for signal <tbuf<63><0>>.
+    Found 4-bit register for signal <tbuf<0><12>>.
+    Found 8-bit register for signal <sbuf<0>>.
+    Found 8-bit register for signal <sbuf<1>>.
+    Found 8-bit register for signal <sbuf<2>>.
+    Found 8-bit register for signal <sbuf<3>>.
+    Found 8-bit register for signal <sbuf<4>>.
+    Found 8-bit register for signal <sbuf<5>>.
+    Found 8-bit register for signal <sbuf<6>>.
+    Found 8-bit register for signal <sbuf<7>>.
+    Found 8-bit register for signal <sbuf<8>>.
+    Found 8-bit register for signal <sbuf<9>>.
+    Found 8-bit register for signal <sbuf<10>>.
+    Found 8-bit register for signal <sbuf<11>>.
+    Found 8-bit register for signal <sbuf<12>>.
+    Found 8-bit register for signal <sbuf<13>>.
+    Found 8-bit register for signal <sbuf<14>>.
+    Found 8-bit register for signal <sbuf<15>>.
+    Found 8-bit register for signal <sbuf<16>>.
+    Found 8-bit register for signal <sbuf<17>>.
+    Found 8-bit register for signal <sbuf<18>>.
+    Found 8-bit register for signal <sbuf<19>>.
+    Found 8-bit register for signal <sbuf<20>>.
+    Found 8-bit register for signal <sbuf<21>>.
+    Found 8-bit register for signal <sbuf<22>>.
+    Found 8-bit register for signal <sbuf<23>>.
+    Found 8-bit register for signal <sbuf<24>>.
+    Found 8-bit register for signal <sbuf<25>>.
+    Found 8-bit register for signal <sbuf<26>>.
+    Found 8-bit register for signal <sbuf<27>>.
+    Found 8-bit register for signal <sbuf<28>>.
+    Found 8-bit register for signal <sbuf<29>>.
+    Found 8-bit register for signal <sbuf<30>>.
+    Found 8-bit register for signal <sbuf<31>>.
+    Found 8-bit register for signal <sbuf<32>>.
+    Found 8-bit register for signal <sbuf<33>>.
+    Found 8-bit register for signal <sbuf<34>>.
+    Found 8-bit register for signal <sbuf<35>>.
+    Found 8-bit register for signal <sbuf<36>>.
+    Found 8-bit register for signal <sbuf<37>>.
+    Found 8-bit register for signal <sbuf<38>>.
+    Found 8-bit register for signal <sbuf<39>>.
+    Found 8-bit register for signal <sbuf<40>>.
+    Found 8-bit register for signal <sbuf<41>>.
+    Found 8-bit register for signal <sbuf<42>>.
+    Found 8-bit register for signal <sbuf<43>>.
+    Found 8-bit register for signal <sbuf<44>>.
+    Found 8-bit register for signal <sbuf<45>>.
+    Found 8-bit register for signal <sbuf<46>>.
+    Found 8-bit register for signal <sbuf<47>>.
+    Found 8-bit register for signal <sbuf<48>>.
+    Found 8-bit register for signal <sbuf<49>>.
+    Found 8-bit register for signal <sbuf<50>>.
+    Found 8-bit register for signal <sbuf<51>>.
+    Found 8-bit register for signal <sbuf<52>>.
+    Found 8-bit register for signal <sbuf<53>>.
+    Found 8-bit register for signal <sbuf<54>>.
+    Found 8-bit register for signal <sbuf<55>>.
+    Found 8-bit register for signal <sbuf<56>>.
+    Found 8-bit register for signal <sbuf<57>>.
+    Found 8-bit register for signal <sbuf<58>>.
+    Found 8-bit register for signal <sbuf<59>>.
+    Found 8-bit register for signal <sbuf<60>>.
+    Found 8-bit register for signal <sbuf<61>>.
+    Found 8-bit register for signal <sbuf<62>>.
+    Found 8-bit register for signal <sbuf<63>>.
+    Found 7-bit register for signal <cnt>.
+    Found 6-bit register for signal <rpos>.
+    Found 6-bit register for signal <wpos>.
+    Found 6-bit adder for signal <wpos[5]_GND_14_o_add_1800_OUT> created at line 1241.
+    Found 6-bit adder for signal <rpos[5]_GND_14_o_add_2715_OUT> created at line 1241.
+    Found 7-bit adder for signal <cnt[6]_GND_14_o_add_2732_OUT> created at line 1241.
+    Found 7-bit subtractor for signal <GND_14_o_GND_14_o_sub_2734_OUT<6:0>> created at line 1308.
+INFO:Xst:3019 - HDL ADVISOR - 512 flip-flops were inferred for signal <sbuf>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+    Found 4-bit 64-to-1 multiplexer for signal <rpos[5]_tbuf[63][12][3]_wide_mux_2700_OUT> created at line 123.
+    Found 4-bit 64-to-1 multiplexer for signal <rpos[5]_tbuf[63][11][3]_wide_mux_2701_OUT> created at line 123.
+    Found 4-bit 64-to-1 multiplexer for signal <rpos[5]_tbuf[63][10][3]_wide_mux_2702_OUT> created at line 123.
+    Found 4-bit 64-to-1 multiplexer for signal <rpos[5]_tbuf[63][9][3]_wide_mux_2703_OUT> created at line 123.
+    Found 4-bit 64-to-1 multiplexer for signal <rpos[5]_tbuf[63][8][3]_wide_mux_2704_OUT> created at line 123.
+    Found 4-bit 64-to-1 multiplexer for signal <rpos[5]_tbuf[63][7][3]_wide_mux_2705_OUT> created at line 123.
+    Found 4-bit 64-to-1 multiplexer for signal <rpos[5]_tbuf[63][6][3]_wide_mux_2706_OUT> created at line 123.
+    Found 4-bit 64-to-1 multiplexer for signal <rpos[5]_tbuf[63][5][3]_wide_mux_2707_OUT> created at line 123.
+    Found 4-bit 64-to-1 multiplexer for signal <rpos[5]_tbuf[63][4][3]_wide_mux_2708_OUT> created at line 123.
+    Found 4-bit 64-to-1 multiplexer for signal <rpos[5]_tbuf[63][3][3]_wide_mux_2709_OUT> created at line 123.
+    Found 4-bit 64-to-1 multiplexer for signal <rpos[5]_tbuf[63][2][3]_wide_mux_2710_OUT> created at line 123.
+    Found 4-bit 64-to-1 multiplexer for signal <rpos[5]_tbuf[63][1][3]_wide_mux_2711_OUT> created at line 123.
+    Found 4-bit 64-to-1 multiplexer for signal <rpos[5]_tbuf[63][0][3]_wide_mux_2712_OUT> created at line 123.
+    Found 8-bit 64-to-1 multiplexer for signal <rpos[5]_sbuf[63][7]_wide_mux_2713_OUT> created at line 124.
+    Found 7-bit comparator greater for signal <cnt[6]_PWR_11_o_LessThan_901_o> created at line 106
+    Found 6-bit comparator greater for signal <wpos[5]_PWR_11_o_LessThan_1800_o> created at line 111
+    Found 7-bit comparator greater for signal <GND_14_o_cnt[6]_LessThan_2700_o> created at line 121
+    Found 6-bit comparator greater for signal <rpos[5]_PWR_11_o_LessThan_2715_o> created at line 127
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred 3859 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+	inferred  30 Multiplexer(s).
+Unit <fifo> synthesized.
+
+Synthesizing Unit <transmitter>.
+    Related source file is "/users/j/jaint2/Downloads/Logic_Analyzer/transmitter.vhd".
+        ts_digits = 14
+        signals = 9
+    Found 8-bit register for signal <buf<1>>.
+    Found 8-bit register for signal <buf<2>>.
+    Found 8-bit register for signal <buf<3>>.
+    Found 8-bit register for signal <buf<4>>.
+    Found 8-bit register for signal <buf<5>>.
+    Found 8-bit register for signal <buf<6>>.
+    Found 8-bit register for signal <buf<7>>.
+    Found 8-bit register for signal <buf<8>>.
+    Found 8-bit register for signal <buf<9>>.
+    Found 8-bit register for signal <buf<10>>.
+    Found 8-bit register for signal <buf<11>>.
+    Found 8-bit register for signal <buf<12>>.
+    Found 8-bit register for signal <buf<13>>.
+    Found 8-bit register for signal <buf<14>>.
+    Found 8-bit register for signal <buf<15>>.
+    Found 8-bit register for signal <buf<16>>.
+    Found 8-bit register for signal <buf<17>>.
+    Found 8-bit register for signal <buf<18>>.
+    Found 8-bit register for signal <buf<19>>.
+    Found 8-bit register for signal <buf<20>>.
+    Found 8-bit register for signal <buf<21>>.
+    Found 8-bit register for signal <buf<22>>.
+    Found 8-bit register for signal <buf<23>>.
+    Found 8-bit register for signal <buf<24>>.
+    Found 8-bit register for signal <buf<25>>.
+    Found 8-bit register for signal <buf<26>>.
+    Found 8-bit register for signal <buf<27>>.
+    Found 8-bit register for signal <buf<28>>.
+    Found 8-bit register for signal <buf<29>>.
+    Found 8-bit register for signal <buf<30>>.
+    Found 8-bit register for signal <buf<31>>.
+    Found 8-bit register for signal <buf<32>>.
+    Found 8-bit register for signal <buf<0>>.
+    Found 8-bit register for signal <buf<33>>.
+    Found 8-bit register for signal <buf<34>>.
+    Found 8-bit register for signal <buf<35>>.
+    Found 8-bit register for signal <buf<36>>.
+    Found 6-bit register for signal <pos>.
+    Found 2-bit register for signal <state>.
+    Found finite state machine <FSM_8> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | st_idle                                        |
+    | Power Up State     | st_idle                                        |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 6-bit adder for signal <pos[5]_GND_15_o_add_89_OUT> created at line 1241.
+    Found 16x8-bit Read Only RAM for signal <ti[13][3]_GND_15_o_wide_mux_48_OUT>
+    Found 16x8-bit Read Only RAM for signal <ti[12][3]_GND_15_o_wide_mux_49_OUT>
+    Found 16x8-bit Read Only RAM for signal <ti[11][3]_GND_15_o_wide_mux_50_OUT>
+    Found 16x8-bit Read Only RAM for signal <ti[10][3]_GND_15_o_wide_mux_51_OUT>
+    Found 16x8-bit Read Only RAM for signal <ti[9][3]_GND_15_o_wide_mux_52_OUT>
+    Found 16x8-bit Read Only RAM for signal <ti[8][3]_GND_15_o_wide_mux_53_OUT>
+    Found 16x8-bit Read Only RAM for signal <ti[7][3]_GND_15_o_wide_mux_54_OUT>
+    Found 16x8-bit Read Only RAM for signal <ti[6][3]_GND_15_o_wide_mux_55_OUT>
+    Found 16x8-bit Read Only RAM for signal <ti[4][3]_GND_15_o_wide_mux_57_OUT>
+    Found 16x8-bit Read Only RAM for signal <ti[3][3]_GND_15_o_wide_mux_58_OUT>
+    Found 16x8-bit Read Only RAM for signal <ti[2][3]_GND_15_o_wide_mux_59_OUT>
+    Found 16x8-bit Read Only RAM for signal <ti[1][3]_GND_15_o_wide_mux_60_OUT>
+    Found 16x8-bit Read Only RAM for signal <ti[0][3]_GND_15_o_wide_mux_61_OUT>
+INFO:Xst:3019 - HDL ADVISOR - 512 flip-flops were inferred for signal <buf>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+    Found 8-bit 37-to-1 multiplexer for signal <pos[5]_X_13_o_wide_mux_87_OUT> created at line 121.
+    Found 6-bit comparator greater for signal <pos[5]_PWR_14_o_LessThan_89_o> created at line 123
+    Summary:
+	inferred  13 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred 302 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   3 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <transmitter> synthesized.
+
+Synthesizing Unit <serial_port>.
+    Related source file is "/users/j/jaint2/Downloads/Logic_Analyzer/serial_port.vhd".
+        clk_freq = 100000000
+        baud_rate = 57600
+    Found 2-bit register for signal <state>.
+    Found 8-bit register for signal <data>.
+    Found 3-bit register for signal <bit>.
+    Found 11-bit register for signal <cnt>.
+    Found finite state machine <FSM_9> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 10                                             |
+    | Inputs             | 3                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | st_idle                                        |
+    | Power Up State     | st_idle                                        |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 11-bit adder for signal <cnt[10]_GND_17_o_add_10_OUT> created at line 1241.
+    Found 3-bit adder for signal <bit[2]_GND_17_o_add_16_OUT> created at line 1241.
+    Found 1-bit 8-to-1 multiplexer for signal <bit[2]_data[7]_Mux_14_o> created at line 115.
+    Found 2-bit 4-to-1 multiplexer for signal <next_state> created at line 91.
+    Found 11-bit comparator greater for signal <cnt[10]_PWR_15_o_LessThan_10_o> created at line 81
+    Found 3-bit comparator greater for signal <bit[2]_PWR_15_o_LessThan_16_o> created at line 117
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  24 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   6 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <serial_port> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 13
+ 16x8-bit single-port Read Only RAM                    : 13
+# Adders/Subtractors                                   : 19
+ 11-bit adder                                          : 1
+ 3-bit adder                                           : 1
+ 4-bit adder                                           : 13
+ 6-bit adder                                           : 3
+ 7-bit addsub                                          : 1
+# Registers                                            : 975
+ 1-bit register                                        : 21
+ 11-bit register                                       : 1
+ 2-bit register                                        : 1
+ 3-bit register                                        : 1
+ 4-bit register                                        : 845
+ 6-bit register                                        : 3
+ 7-bit register                                        : 1
+ 8-bit register                                        : 102
+# Comparators                                          : 20
+ 11-bit comparator greater                             : 1
+ 3-bit comparator greater                              : 1
+ 4-bit comparator greater                              : 13
+ 6-bit comparator greater                              : 3
+ 7-bit comparator greater                              : 2
+# Multiplexers                                         : 71
+ 1-bit 8-to-1 multiplexer                              : 1
+ 11-bit 2-to-1 multiplexer                             : 1
+ 2-bit 2-to-1 multiplexer                              : 2
+ 2-bit 4-to-1 multiplexer                              : 1
+ 3-bit 2-to-1 multiplexer                              : 1
+ 4-bit 2-to-1 multiplexer                              : 45
+ 4-bit 64-to-1 multiplexer                             : 13
+ 6-bit 2-to-1 multiplexer                              : 3
+ 8-bit 2-to-1 multiplexer                              : 2
+ 8-bit 37-to-1 multiplexer                             : 1
+ 8-bit 64-to-1 multiplexer                             : 1
+# FSMs                                                 : 10
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <bcd_counter>.
+The following registers are absorbed into counter <cnt_curr_0>: 1 register on signal <cnt_curr_0>.
+The following registers are absorbed into counter <cnt_curr_1>: 1 register on signal <cnt_curr_1>.
+The following registers are absorbed into counter <cnt_curr_2>: 1 register on signal <cnt_curr_2>.
+The following registers are absorbed into counter <cnt_curr_3>: 1 register on signal <cnt_curr_3>.
+The following registers are absorbed into counter <cnt_curr_4>: 1 register on signal <cnt_curr_4>.
+The following registers are absorbed into counter <cnt_curr_5>: 1 register on signal <cnt_curr_5>.
+The following registers are absorbed into counter <cnt_curr_6>: 1 register on signal <cnt_curr_6>.
+The following registers are absorbed into counter <cnt_curr_7>: 1 register on signal <cnt_curr_7>.
+The following registers are absorbed into counter <cnt_curr_8>: 1 register on signal <cnt_curr_8>.
+The following registers are absorbed into counter <cnt_curr_9>: 1 register on signal <cnt_curr_9>.
+The following registers are absorbed into counter <cnt_curr_10>: 1 register on signal <cnt_curr_10>.
+The following registers are absorbed into counter <cnt_curr_11>: 1 register on signal <cnt_curr_11>.
+The following registers are absorbed into counter <cnt_curr_12>: 1 register on signal <cnt_curr_12>.
+Unit <bcd_counter> synthesized (advanced).
+
+Synthesizing (advanced) Unit <fifo>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+The following registers are absorbed into counter <rpos>: 1 register on signal <rpos>.
+The following registers are absorbed into counter <wpos>: 1 register on signal <wpos>.
+Unit <fifo> synthesized (advanced).
+
+Synthesizing (advanced) Unit <serial_port>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+The following registers are absorbed into counter <bit>: 1 register on signal <bit>.
+Unit <serial_port> synthesized (advanced).
+
+Synthesizing (advanced) Unit <transmitter>.
+The following registers are absorbed into counter <pos>: 1 register on signal <pos>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_ti[13][3]_GND_15_o_wide_mux_48_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <ti<13>>        |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_ti[12][3]_GND_15_o_wide_mux_49_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <ti<12>>        |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_ti[11][3]_GND_15_o_wide_mux_50_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <ti<11>>        |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_ti[10][3]_GND_15_o_wide_mux_51_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <ti<10>>        |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_ti[9][3]_GND_15_o_wide_mux_52_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <ti<9>>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_ti[8][3]_GND_15_o_wide_mux_53_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <ti<8>>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_ti[7][3]_GND_15_o_wide_mux_54_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <ti<7>>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_ti[6][3]_GND_15_o_wide_mux_55_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <ti<6>>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_ti[4][3]_GND_15_o_wide_mux_57_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <ti<4>>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_ti[3][3]_GND_15_o_wide_mux_58_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <ti<3>>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_ti[2][3]_GND_15_o_wide_mux_59_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <ti<2>>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_ti[1][3]_GND_15_o_wide_mux_60_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <ti<1>>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_ti[0][3]_GND_15_o_wide_mux_61_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <ti<0>>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <transmitter> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 13
+ 16x8-bit single-port distributed Read Only RAM        : 13
+# Adders/Subtractors                                   : 1
+ 11-bit adder                                          : 1
+# Counters                                             : 19
+ 11-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+ 4-bit up counter                                      : 13
+ 6-bit up counter                                      : 3
+ 7-bit updown counter                                  : 1
+# Registers                                            : 4167
+ Flip-Flops                                            : 4167
+# Comparators                                          : 20
+ 11-bit comparator greater                             : 1
+ 3-bit comparator greater                              : 1
+ 4-bit comparator greater                              : 13
+ 6-bit comparator greater                              : 3
+ 7-bit comparator greater                              : 2
+# Multiplexers                                         : 62
+ 1-bit 2-to-1 multiplexer                              : 2
+ 1-bit 37-to-1 multiplexer                             : 8
+ 1-bit 8-to-1 multiplexer                              : 1
+ 11-bit 2-to-1 multiplexer                             : 1
+ 2-bit 2-to-1 multiplexer                              : 1
+ 2-bit 4-to-1 multiplexer                              : 1
+ 4-bit 2-to-1 multiplexer                              : 32
+ 4-bit 64-to-1 multiplexer                             : 13
+ 8-bit 2-to-1 multiplexer                              : 2
+ 8-bit 64-to-1 multiplexer                             : 1
+# FSMs                                                 : 10
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <buf_35_3> has a constant value of 1 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_35_4> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_35_5> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_35_6> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_35_7> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_2_1> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_2_2> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_2_3> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_2_5> has a constant value of 1 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_2_6> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_2_7> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_4_1> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_4_2> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_4_3> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_4_5> has a constant value of 1 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_4_6> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_4_7> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_6_1> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_6_2> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_6_3> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_6_5> has a constant value of 1 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_33_6> has a constant value of 1 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_33_7> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_36_0> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_36_1> has a constant value of 1 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_36_2> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_36_3> has a constant value of 1 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_36_4> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_36_5> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_36_6> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_36_7> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_34_0> has a constant value of 1 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_34_1> has a constant value of 1 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_34_2> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_34_3> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_34_4> has a constant value of 1 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_34_5> has a constant value of 1 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_34_6> has a constant value of 1 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_34_7> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_35_0> has a constant value of 1 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_35_1> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_35_2> has a constant value of 1 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_14_3> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_14_5> has a constant value of 1 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_14_6> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_14_7> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_16_1> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_16_2> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_16_3> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_16_5> has a constant value of 1 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_16_6> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_16_7> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_26_0> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_26_4> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_26_5> has a constant value of 1 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_26_6> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_26_7> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_0_1> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_0_2> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_0_3> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_0_5> has a constant value of 1 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_0_6> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_0_7> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_6_6> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_6_7> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_12_1> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_12_2> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_12_3> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_12_5> has a constant value of 1 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_12_6> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_12_7> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_8_1> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_8_2> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_8_3> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_8_5> has a constant value of 1 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_8_6> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_8_7> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_10_1> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_10_2> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_10_3> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_10_5> has a constant value of 1 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_10_6> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_10_7> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_14_1> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_14_2> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_5_6> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_5_7> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_7_0> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_7_1> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_7_2> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_7_3> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_7_4> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_7_5> has a constant value of 1 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_7_6> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_7_7> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_13_0> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_13_1> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_13_2> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_13_3> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_13_4> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_13_5> has a constant value of 1 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_13_6> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_13_7> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_9_0> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_9_1> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_9_2> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_1_0> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_1_1> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_1_2> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_1_3> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_1_4> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_1_5> has a constant value of 1 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_1_6> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_1_7> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_3_0> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_3_1> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_3_2> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_3_3> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_3_4> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_3_5> has a constant value of 1 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_3_6> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_3_7> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_5_0> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_5_1> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_5_2> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_5_3> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_5_4> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_5_5> has a constant value of 1 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_17_1> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_17_2> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_17_3> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_17_4> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_17_5> has a constant value of 1 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_17_6> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_17_7> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_32_0> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_32_1> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_32_2> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_32_3> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_32_4> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_32_5> has a constant value of 1 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_32_6> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_32_7> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_33_0> has a constant value of 1 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_33_1> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_33_2> has a constant value of 1 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_33_3> has a constant value of 1 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_33_4> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_33_5> has a constant value of 1 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_9_3> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_9_4> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_9_5> has a constant value of 1 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_9_6> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_9_7> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_11_0> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_11_1> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_11_2> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_11_3> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_11_4> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_11_5> has a constant value of 1 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_11_6> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_11_7> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_15_0> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_15_1> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_15_2> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_15_3> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_15_4> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_15_5> has a constant value of 1 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_15_6> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_15_7> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_17_0> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <buf_2_4> in Unit <transmitter> is equivalent to the following 11 FFs/Latches, which will be removed : <buf_4_4> <buf_6_4> <buf_12_4> <buf_8_4> <buf_10_4> <buf_14_4> <buf_16_4> <buf_26_1> <buf_26_2> <buf_26_3> <buf_0_4> 
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <trigger_uut/FSM_0> on signal <state_0[1:2]> with gray encoding.
+-----------------------------
+ State           | Encoding
+-----------------------------
+ st_low          | 00
+ st_rising_edge  | 01
+ st_high         | 11
+ st_falling_edge | 10
+-----------------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <trigger_uut/FSM_1> on signal <state_1[1:2]> with gray encoding.
+-----------------------------
+ State           | Encoding
+-----------------------------
+ st_low          | 00
+ st_rising_edge  | 01
+ st_high         | 11
+ st_falling_edge | 10
+-----------------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <trigger_uut/FSM_2> on signal <state_2[1:2]> with gray encoding.
+-----------------------------
+ State           | Encoding
+-----------------------------
+ st_low          | 00
+ st_rising_edge  | 01
+ st_high         | 11
+ st_falling_edge | 10
+-----------------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <trigger_uut/FSM_3> on signal <state_3[1:2]> with gray encoding.
+-----------------------------
+ State           | Encoding
+-----------------------------
+ st_low          | 00
+ st_rising_edge  | 01
+ st_high         | 11
+ st_falling_edge | 10
+-----------------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <trigger_uut/FSM_4> on signal <state_4[1:2]> with gray encoding.
+-----------------------------
+ State           | Encoding
+-----------------------------
+ st_low          | 00
+ st_rising_edge  | 01
+ st_high         | 11
+ st_falling_edge | 10
+-----------------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <trigger_uut/FSM_5> on signal <state_5[1:2]> with gray encoding.
+-----------------------------
+ State           | Encoding
+-----------------------------
+ st_low          | 00
+ st_rising_edge  | 01
+ st_high         | 11
+ st_falling_edge | 10
+-----------------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <trigger_uut/FSM_6> on signal <state_6[1:2]> with gray encoding.
+-----------------------------
+ State           | Encoding
+-----------------------------
+ st_low          | 00
+ st_rising_edge  | 01
+ st_high         | 11
+ st_falling_edge | 10
+-----------------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <trigger_uut/FSM_7> on signal <state_7[1:2]> with gray encoding.
+-----------------------------
+ State           | Encoding
+-----------------------------
+ st_low          | 00
+ st_rising_edge  | 01
+ st_high         | 11
+ st_falling_edge | 10
+-----------------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <transmitter_unit/FSM_8> on signal <state[1:2]> with user encoding.
+-------------------------
+ State       | Encoding
+-------------------------
+ st_idle     | 00
+ st_wait     | 01
+ st_transmit | 10
+-------------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <serial_port_unit/FSM_9> on signal <state[1:2]> with gray encoding.
+-------------------------
+ State       | Encoding
+-------------------------
+ st_idle     | 00
+ st_wait     | 01
+ st_start    | 11
+ st_transmit | 10
+-------------------------
+WARNING:Xst:1293 - FF/Latch <buf_18_7> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_19_7> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_22_7> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_20_7> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_21_7> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_23_7> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_24_7> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_25_7> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_29_7> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_27_7> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_28_7> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_30_7> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buf_31_7> has a constant value of 0 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <top_level> ...
+
+Optimizing unit <bcd_counter> ...
+
+Optimizing unit <trigger> ...
+
+Optimizing unit <fifo> ...
+
+Optimizing unit <transmitter> ...
+
+Optimizing unit <serial_port> ...
+WARNING:Xst:1293 - FF/Latch <serial_port_unit/data_7> has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <serial_port_unit/state_FSM_FFd1> in Unit <top_level> is equivalent to the following FF/Latch, which will be removed : <serial_port_unit/fsmfake9_1> 
+INFO:Xst:3203 - The FF/Latch <transmitter_unit/buf_24_6> in Unit <top_level> is the opposite to the following FF/Latch, which will be removed : <transmitter_unit/buf_24_5> 
+INFO:Xst:3203 - The FF/Latch <transmitter_unit/buf_19_6> in Unit <top_level> is the opposite to the following FF/Latch, which will be removed : <transmitter_unit/buf_19_5> 
+INFO:Xst:3203 - The FF/Latch <transmitter_unit/buf_30_6> in Unit <top_level> is the opposite to the following FF/Latch, which will be removed : <transmitter_unit/buf_30_5> 
+INFO:Xst:3203 - The FF/Latch <transmitter_unit/buf_25_6> in Unit <top_level> is the opposite to the following FF/Latch, which will be removed : <transmitter_unit/buf_25_5> 
+INFO:Xst:3203 - The FF/Latch <transmitter_unit/buf_31_6> in Unit <top_level> is the opposite to the following FF/Latch, which will be removed : <transmitter_unit/buf_31_5> 
+INFO:Xst:3203 - The FF/Latch <transmitter_unit/buf_27_6> in Unit <top_level> is the opposite to the following FF/Latch, which will be removed : <transmitter_unit/buf_27_5> 
+INFO:Xst:3203 - The FF/Latch <transmitter_unit/buf_20_6> in Unit <top_level> is the opposite to the following FF/Latch, which will be removed : <transmitter_unit/buf_20_5> 
+INFO:Xst:3203 - The FF/Latch <transmitter_unit/buf_28_6> in Unit <top_level> is the opposite to the following FF/Latch, which will be removed : <transmitter_unit/buf_28_5> 
+INFO:Xst:3203 - The FF/Latch <transmitter_unit/buf_21_6> in Unit <top_level> is the opposite to the following FF/Latch, which will be removed : <transmitter_unit/buf_21_5> 
+INFO:Xst:3203 - The FF/Latch <transmitter_unit/buf_29_6> in Unit <top_level> is the opposite to the following FF/Latch, which will be removed : <transmitter_unit/buf_29_5> 
+INFO:Xst:3203 - The FF/Latch <transmitter_unit/buf_22_6> in Unit <top_level> is the opposite to the following FF/Latch, which will be removed : <transmitter_unit/buf_22_5> 
+INFO:Xst:3203 - The FF/Latch <transmitter_unit/buf_23_6> in Unit <top_level> is the opposite to the following FF/Latch, which will be removed : <transmitter_unit/buf_23_5> 
+INFO:Xst:3203 - The FF/Latch <transmitter_unit/buf_18_6> in Unit <top_level> is the opposite to the following FF/Latch, which will be removed : <transmitter_unit/buf_18_5> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block top_level, actual ratio is 65.
+WARNING:Xst:2677 - Node <serial_port_unit/fsmfake9_0> of sequential type is unconnected in block <top_level>.
+FlipFlop trigger_uut/state_0_FSM_FFd2 has been replicated 1 time(s)
+FlipFlop trigger_uut/state_1_FSM_FFd2 has been replicated 1 time(s)
+FlipFlop trigger_uut/state_2_FSM_FFd2 has been replicated 1 time(s)
+FlipFlop trigger_uut/state_3_FSM_FFd2 has been replicated 1 time(s)
+FlipFlop trigger_uut/state_4_FSM_FFd2 has been replicated 1 time(s)
+FlipFlop trigger_uut/state_5_FSM_FFd2 has been replicated 1 time(s)
+FlipFlop trigger_uut/state_6_FSM_FFd2 has been replicated 1 time(s)
+FlipFlop trigger_uut/state_7_FSM_FFd2 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 4075
+ Flip-Flops                                            : 4075
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : top_level.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 3281
+#      GND                         : 1
+#      INV                         : 4
+#      LUT2                        : 12
+#      LUT3                        : 1556
+#      LUT4                        : 47
+#      LUT5                        : 133
+#      LUT6                        : 1499
+#      MUXCY                       : 10
+#      MUXF7                       : 7
+#      VCC                         : 1
+#      XORCY                       : 11
+# FlipFlops/Latches                : 4075
+#      FDC                         : 52
+#      FDCE                        : 4010
+#      FDP                         : 1
+#      FDPE                        : 12
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 35
+#      IBUF                        : 14
+#      OBUF                        : 21
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            4075  out of  18224    22%  
+ Number of Slice LUTs:                 3251  out of   9112    35%  
+    Number used as Logic:              3251  out of   9112    35%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   5564
+   Number with an unused Flip Flop:    1489  out of   5564    26%  
+   Number with an unused LUT:          2313  out of   5564    41%  
+   Number of fully used LUT-FF pairs:  1762  out of   5564    31%  
+   Number of unique control sets:        66
+
+IO Utilization: 
+ Number of IOs:                          42
+ Number of bonded IOBs:                  36  out of    232    15%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 4075  |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 7.194ns (Maximum Frequency: 139.000MHz)
+   Minimum input arrival time before clock: 4.597ns
+   Maximum output required time after clock: 5.813ns
+   Maximum combinational path delay: 6.738ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 7.194ns (frequency: 139.000MHz)
+  Total number of paths / destination ports: 176057 / 8082
+-------------------------------------------------------------------------
+Delay:               7.194ns (Levels of Logic = 3)
+  Source:            trigger_uut/state_3_FSM_FFd2_1 (FF)
+  Destination:       fifo_uut/sbuf_30_7 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: trigger_uut/state_3_FSM_FFd2_1 to fifo_uut/sbuf_30_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.447   0.961  trigger_uut/state_3_FSM_FFd2_1 (trigger_uut/state_3_FSM_FFd2_1)
+     LUT6:I1->O            3   0.203   0.898  trigger_uut/wo1 (trigger_uut/wo)
+     LUT4:I0->O         1559   0.203   2.342  trigger_uut/wo5 (tr_w)
+     LUT6:I5->O           60   0.205   1.613  fifo_uut/_n7692_inv1 (fifo_uut/_n7692_inv)
+     FDCE:CE                   0.322          fifo_uut/tbuf_25_12_0
+    ----------------------------------------
+    Total                      7.194ns (1.380ns logic, 5.814ns route)
+                                       (19.2% logic, 80.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 4083 / 4083
+-------------------------------------------------------------------------
+Offset:              4.597ns (Levels of Logic = 1)
+  Source:            sw<0> (PAD)
+  Destination:       uptime_unit/cnt_curr_12_3 (FF)
+  Destination Clock: clk rising
+
+  Data Path: sw<0> to uptime_unit/cnt_curr_12_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O          4076   1.222   2.945  sw_0_IBUF (ld_0_OBUF)
+     FDP:PRE                   0.430          uptime_unit/cnt_reset_0
+    ----------------------------------------
+    Total                      4.597ns (1.652ns logic, 2.945ns route)
+                                       (35.9% logic, 64.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 14 / 1
+-------------------------------------------------------------------------
+Offset:              5.813ns (Levels of Logic = 4)
+  Source:            serial_port_unit/bit_0 (FF)
+  Destination:       tx (PAD)
+  Source Clock:      clk rising
+
+  Data Path: serial_port_unit/bit_0 to tx
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              6   0.447   1.089  serial_port_unit/bit_0 (serial_port_unit/bit_0)
+     LUT6:I1->O            1   0.203   0.000  serial_port_unit/Mmux_bit[2]_data[7]_Mux_14_o_3 (serial_port_unit/Mmux_bit[2]_data[7]_Mux_14_o_3)
+     MUXF7:I1->O           1   0.140   0.580  serial_port_unit/Mmux_bit[2]_data[7]_Mux_14_o_2_f7 (serial_port_unit/bit[2]_data[7]_Mux_14_o)
+     LUT3:I2->O            1   0.205   0.579  serial_port_unit/do1 (tx_OBUF)
+     OBUF:I->O                 2.571          tx_OBUF (tx)
+    ----------------------------------------
+    Total                      5.813ns (3.566ns logic, 2.247ns route)
+                                       (61.3% logic, 38.7% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 8 / 4
+-------------------------------------------------------------------------
+Delay:               6.738ns (Levels of Logic = 2)
+  Source:            sw<0> (PAD)
+  Destination:       ld<0> (PAD)
+
+  Data Path: sw<0> to ld<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O          4076   1.222   2.945  sw_0_IBUF (ld_0_OBUF)
+     OBUF:I->O                 2.571          ld_0_OBUF (ld<0>)
+    ----------------------------------------
+    Total                      6.738ns (3.793ns logic, 2.945ns route)
+                                       (56.3% logic, 43.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    7.194|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 17.00 secs
+Total CPU time to Xst completion: 15.63 secs
+ 
+--> 
+
+
+Total memory usage is 140520 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  191 (   0 filtered)
+Number of infos    :   34 (   0 filtered)
+

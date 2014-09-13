@@ -1,0 +1,10 @@
+set -tmpdir "tmp"
+set -xsthdpdir "tmp"
+run
+-lso tmp/top_level.lso
+-ifn tmp/top_level.prj
+-ofn top_level
+-p xc6slx16-csg324-3
+-top top_level
+-opt_mode speed
+-opt_level 1

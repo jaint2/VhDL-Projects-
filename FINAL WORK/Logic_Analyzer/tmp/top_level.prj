@@ -1,0 +1,8 @@
+vhdl work "std_logic_textio.vhd"
+vhdl work "util.vhd"
+vhdl work "bcd_counter.vhd"
+vhdl work "fifo.vhd"
+vhdl work "trigger.vhd"
+vhdl work "transmitter.vhd"
+vhdl work "serial_port.vhd"
+vhdl work "top_level.vhd"
